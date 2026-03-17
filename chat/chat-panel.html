@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DYF Chat</title>
+  <style>
+    :root {
+      --bg: #1e1e1e; --bg-panel: rgba(28,28,28,0.95);
+      --bg-btn: #444; --bg-btn-hover: #555;
+      --fg: #ddd; --fg-muted: #999;
+      --border: #444;
+      --user-bg: #2a4a6b; --assistant-bg: #2a2a2a;
+      --accent: #7af;
+    }
+    body.light {
+      --bg: #f5f5f5; --bg-panel: rgba(245,245,245,0.97);
+      --bg-btn: #ddd; --bg-btn-hover: #ccc;
+      --fg: #222; --fg-muted: #666;
+      --border: #ccc;
+      --user-bg: #d0e4f7; --assistant-bg: #e8e8e8;
+      --accent: #2678c0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; overflow: hidden; }
+    body { background: var(--bg); color: var(--fg); font: 14px/1.5 -apple-system, "Segoe UI", sans-serif; }
+    #app {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Status bar (compact, replaces header) */
+    #status-bar {
+      padding: 6px 12px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+      font-size: 11px;
+    }
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 1px 8px; border-radius: 10px; font-size: 10px;
+      background: var(--bg-btn); color: var(--fg-muted);
+    }
+    .status-pill .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #666; flex-shrink: 0;
+    }
+    .status-pill.ready .dot { background: #4c4; }
+    .status-pill.loading .dot { background: #fa0; animation: pulse 1s infinite; }
+    .status-pill.error .dot { background: #e44; }
+    .status-pill.active { background: var(--accent); color: #111; }
+    .status-pill.active .dot { background: #fff; animation: pulse 0.5s infinite; }
+    @keyframes pulse { 50% { opacity: 0.4; } }
+    #status-spacer { flex: 1; }
+
+    /* Progress area */
+    #progress-area {
+      padding: 6px 12px; border-bottom: 1px solid var(--border);
+      display: none; flex-shrink: 0;
+    }
+    .progress-row { margin: 3px 0; }
+    .progress-row label { display: block; font-size: 10px; color: var(--fg-muted); margin-bottom: 1px; }
+    .progress-bar {
+      width: 100%; height: 4px; background: var(--bg-btn);
+      border-radius: 2px; overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%; background: var(--accent); width: 0%;
+      transition: width 0.3s;
+    }
+
+    /* Chat area */
+    #chat {
+      flex: 1; min-height: 0; overflow-y: auto; padding: 12px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .msg {
+      max-width: 95%; padding: 8px 12px; border-radius: 10px;
+      font-size: 13px; line-height: 1.5; white-space: pre-wrap;
+      word-wrap: break-word; flex-shrink: 0;
+    }
+    .msg.user {
+      align-self: flex-end; background: var(--user-bg);
+      border-bottom-right-radius: 2px;
+    }
+    .msg.assistant {
+      align-self: flex-start; background: var(--assistant-bg);
+      border-bottom-left-radius: 2px;
+      position: relative; overflow: hidden;
+    }
+    .msg.assistant .render-fill {
+      position: absolute; top: 0; left: 0; bottom: 0;
+      width: 0%; background: rgba(122, 170, 255, 0.08);
+      pointer-events: none; z-index: 0;
+    }
+    .msg.assistant .render-fill.generating {
+      animation: tts-pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes tts-pulse {
+      0%   { width: 0%;   opacity: 0.6; }
+      50%  { width: 100%; opacity: 1; }
+      100% { width: 0%;   opacity: 0.6; }
+    }
+    .msg.assistant .render-fill.playing {
+      transition: width 0.3s linear;
+    }
+    body.light .msg.assistant .render-fill {
+      background: rgba(38, 120, 192, 0.07);
+    }
+    .msg.assistant > :not(.render-fill) { position: relative; z-index: 1; }
+    .msg.system {
+      align-self: center; color: var(--fg-muted); font-size: 11px;
+      background: none; padding: 3px;
+    }
+
+    /* Replay button */
+    .replay-btn {
+      display: inline-flex; align-items: center; gap: 3px;
+      margin-top: 4px; padding: 2px 6px; border-radius: 3px;
+      background: none; border: 1px solid var(--border); color: var(--fg-muted);
+      font-size: 10px; cursor: pointer; opacity: 0.6;
+    }
+    .replay-btn:hover { opacity: 1; border-color: var(--accent); }
+    .replay-btn svg { width: 10px; height: 10px; fill: currentColor; }
+
+    /* Input area */
+    #input-area {
+      padding: 8px 12px; border-top: 1px solid var(--border);
+      display: flex; gap: 6px; align-items: center; flex-shrink: 0;
+    }
+    #user-input {
+      flex: 1; padding: 8px 10px; border-radius: 6px;
+      border: 1px solid var(--border); background: var(--bg-panel);
+      color: var(--fg); font: inherit; font-size: 13px;
+      outline: none; resize: none;
+    }
+    #user-input:focus { border-color: var(--accent); }
+    #send-btn, #stop-btn {
+      padding: 8px 14px; border-radius: 6px; border: none;
+      font-weight: 600; cursor: pointer; font-size: 13px;
+    }
+    #send-btn { background: var(--accent); color: #111; }
+    #send-btn:disabled { opacity: 0.4; cursor: default; }
+    #stop-btn { background: #e44; color: #fff; display: none; }
+    .msg .word-highlight {
+      background: rgba(122, 170, 255, 0.3); border-radius: 2px;
+      transition: background 0.15s;
+    }
+    body.light .msg .word-highlight {
+      background: rgba(38, 120, 192, 0.2);
+    }
+
+    /* Starter menu */
+    #starter-menu {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 8px; padding: 12px; max-width: 100%; margin: auto;
+    }
+    #starter-menu h2 { font-size: 14px; font-weight: 600; color: var(--fg-muted); }
+    #starter-menu .starter-section {
+      font-size: 10px; color: var(--fg-muted); text-transform: uppercase;
+      letter-spacing: 0.5px; margin-top: 4px; align-self: flex-start;
+    }
+    .starter-chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+    .starter-chip {
+      padding: 6px 10px; border-radius: 16px; font-size: 12px;
+      background: var(--bg-btn); color: var(--fg); border: 1px solid var(--border);
+      cursor: pointer; text-align: left; line-height: 1.3;
+    }
+    .starter-chip:hover { background: var(--bg-btn-hover); border-color: var(--accent); }
+
+    /* Category links in chat responses */
+    .category-link {
+      color: var(--accent); cursor: pointer;
+      border-bottom: 1px dotted var(--accent);
+    }
+    .category-link:hover { border-bottom-style: solid; }
+
+    /* Product tables in chat */
+    .product-tables { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+    .product-table {
+      border: 1px solid var(--border); border-radius: 4px;
+      overflow: hidden; font-size: 11px;
+    }
+    .product-table-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 4px 8px; background: rgba(122, 170, 255, 0.1);
+      cursor: pointer; user-select: none;
+    }
+    body.light .product-table-header { background: rgba(38, 120, 192, 0.08); }
+    .product-table-header .cat-name { color: var(--accent); font-weight: 600; font-size: 11px; }
+    .product-table-header .cat-name:hover { text-decoration: underline; }
+    .product-table-header .cat-meta { color: var(--fg-muted); font-size: 10px; }
+    .product-table-items {
+      padding: 4px 8px 6px; border-top: 1px solid var(--border);
+      display: flex; flex-wrap: wrap; gap: 4px;
+      max-height: 80px; overflow: hidden;
+    }
+    .product-table-items span, .product-table-items a.product-link {
+      display: inline-block; padding: 2px 8px; border-radius: 10px;
+      background: var(--bg-btn); color: var(--fg-muted); font-size: 10px;
+      line-height: 1.3; max-width: 200px; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis; text-decoration: none;
+    }
+    a.product-link { color: var(--accent); cursor: pointer; }
+    a.product-link:hover { text-decoration: underline; }
+
+    .input-toggles {
+      display: flex; flex-direction: column; gap: 2px;
+      font-size: 10px; color: var(--fg-muted); white-space: nowrap;
+    }
+    .input-toggles label { display: flex; align-items: center; gap: 3px; cursor: pointer; }
+    .input-toggles input { cursor: pointer; }
+    .input-toggles select {
+      background: var(--bg-btn); color: var(--fg); border: 1px solid var(--border);
+      border-radius: 3px; font-size: 10px; padding: 1px 3px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <!-- Status bar (compact) -->
+  <div id="status-bar">
+    <div id="status-llm" class="status-pill"><span class="dot"></span><span>LLM</span></div>
+    <div id="status-tts" class="status-pill"><span class="dot"></span><span>TTS</span></div>
+    <div id="status-embed" class="status-pill"><span class="dot"></span><span>Embed</span></div>
+    <div id="status-spacer"></div>
+  </div>
+
+  <!-- Progress -->
+  <div id="progress-area">
+    <div class="progress-row" id="prog-llm-row">
+      <label id="prog-llm-label">LLM: waiting...</label>
+      <div class="progress-bar"><div class="progress-bar-fill" id="prog-llm-fill"></div></div>
+    </div>
+    <div class="progress-row" id="prog-tts-row">
+      <label id="prog-tts-label">TTS: waiting...</label>
+      <div class="progress-bar"><div class="progress-bar-fill" id="prog-tts-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div id="chat">
+    <div class="msg system">Loading data...</div>
+  </div>
+
+  <!-- Input -->
+  <div id="input-area">
+    <input type="text" id="user-input" placeholder="Ask about the dataset..." disabled>
+    <div class="input-toggles">
+      <label><input type="checkbox" id="audio-cb" checked> Audio</label>
+      <select id="tts-engine">
+        <option value="browser">Fast</option>
+        <option value="kokoro">Kokoro</option>
+      </select>
+    </div>
+    <button id="send-btn" disabled>Send</button>
+    <button id="stop-btn">Stop</button>
+  </div>
+</div><!-- /app -->
+
+<script type="module">
+
+// ── State ────────────────────────────────────────────────────────────────────
+let scaffoldText = null;
+let scaffoldData = null;
+let idfIndex = null;
+let engine = null;
+let tts = null;
+let embedder = null;
+let centroids = null;
+let generating = false;
+let audioCtx = null;
+let abortCtrl = null;      // AbortController for current generation
+let activeAudioSrc = null;  // current AudioBufferSourceNode (for stop)
+
+// Per-item embeddings from .dyf (all items)
+let dyfEmbeddings = null;   // Float32Array(N * dim), flat
+let dyfDim = 0;             // embedding dimension
+let dyfCount = 0;           // total items
+let dyfTitles = null;       // string[] from .dyf title field
+let dyfCommunityIds = null; // Int32Array from .dyf community_id field
+let dyfPrimaryDis = null;   // string[] from .dyf primary_di field
+
+const GUDID_URL = "https://accessgudid.nlm.nih.gov/devices/";
+
+const chatEl = document.getElementById("chat");
+const inputEl = document.getElementById("user-input");
+const sendBtn = document.getElementById("send-btn");
+const stopBtn = document.getElementById("stop-btn");
+const audioCb = document.getElementById("audio-cb");
+const ttsSelect = document.getElementById("tts-engine");
+const progArea = document.getElementById("progress-area");
+
+// ── Conversation persistence ─────────────────────────────────────────────
+function saveConversation() {
+  const msgs = [];
+  for (const el of chatEl.querySelectorAll(".msg.user, .msg.assistant")) {
+    msgs.push({
+      role: el.classList.contains("user") ? "user" : "assistant",
+      text: el.textContent,
+    });
+  }
+  try { sessionStorage.setItem("dyf-chat-history", JSON.stringify(msgs)); } catch(_) {}
+}
+
+function restoreConversation() {
+  try {
+    const saved = sessionStorage.getItem("dyf-chat-history");
+    if (!saved) return false;
+    const msgs = JSON.parse(saved);
+    if (!msgs.length) return false;
+    for (const m of msgs) {
+      addMsg(m.role, m.text);
+    }
+    return true;
+  } catch(_) { return false; }
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function setStatus(id, state, text) {
+  const pill = document.getElementById(id);
+  pill.className = "status-pill " + state;
+  pill.querySelector("span:last-child").textContent = text || pill.querySelector("span:last-child").textContent;
+}
+
+// Activate a pill during work, restore when done
+function pillOn(id) {
+  const pill = document.getElementById(id);
+  pill._prevClass = pill.className;
+  pill.className = "status-pill active";
+}
+function pillOff(id) {
+  const pill = document.getElementById(id);
+  pill.className = pill._prevClass || "status-pill ready";
+}
+
+function addMsg(role, text) {
+  const div = document.createElement("div");
+  div.className = "msg " + role;
+  div.textContent = text;
+  chatEl.appendChild(div);
+  chatEl.scrollTop = chatEl.scrollHeight;
+  return div;
+}
+
+function setReady() {
+  if (engine && scaffoldText) {
+    inputEl.disabled = false;
+    sendBtn.disabled = false;
+    inputEl.focus();
+  }
+}
+
+// Theme sync with parent
+function setTheme(isLight) {
+  if (isLight) document.body.classList.add("light");
+  else document.body.classList.remove("light");
+}
+
+// Map of lowercase category name → { id, name }
+let categoryNameMap = {};
+
+function buildCategoryNameMap() {
+  if (!scaffoldData) return;
+  const comms = scaffoldData.communities || {};
+  categoryNameMap = {};
+  for (const [cid, info] of Object.entries(comms)) {
+    categoryNameMap[info.name.toLowerCase()] = { id: cid, name: info.name };
+  }
+}
+
+function askAboutCategory(name) {
+  if (generating) return;
+  const starterMenu = document.getElementById("starter-menu");
+  if (starterMenu) starterMenu.remove();
+  inputEl.value = `What is ${name}?`;
+  sendMessage();
+}
+
+// Linkify category names — clicks post to parent for navigation
+function linkifyCategoryNames(el) {
+  if (!scaffoldData || Object.keys(categoryNameMap).length === 0) return;
+  const names = Object.values(categoryNameMap).map(c => c.name);
+  names.sort((a, b) => b.length - a.length);
+  const escaped = names.map(n => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const pattern = new RegExp(`(${escaped.join("|")})`, "gi");
+
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+  for (const node of textNodes) {
+    if (!pattern.test(node.textContent)) continue;
+    pattern.lastIndex = 0;
+    const frag = document.createDocumentFragment();
+    let lastIdx = 0;
+    const text = node.textContent;
+    let match;
+    pattern.lastIndex = 0;
+    while ((match = pattern.exec(text)) !== null) {
+      if (match.index > lastIdx) {
+        frag.appendChild(document.createTextNode(text.slice(lastIdx, match.index)));
+      }
+      const link = document.createElement("span");
+      link.className = "category-link";
+      link.textContent = match[0];
+      const matchedName = match[0];
+      link.addEventListener("click", (e) => {
+        e.stopPropagation();
+        // Post to parent to navigate to category page
+        window.parent.postMessage({ type: "category-clicked", name: matchedName }, "*");
+      });
+      frag.appendChild(link);
+      lastIdx = match.index + match[0].length;
+    }
+    if (lastIdx < text.length) {
+      frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+    }
+    node.parentNode.replaceChild(frag, node);
+  }
+}
+
+function showStarterMenu() {
+  const menu = document.createElement("div");
+  menu.id = "starter-menu";
+
+  const h = document.createElement("h2");
+  h.textContent = "What would you like to know?";
+  menu.appendChild(h);
+
+  const questions = [];
+  if (scaffoldData) {
+    const d = scaffoldData;
+    const comms = d.communities || {};
+    const ranking = d.size_ranking || [];
+    const bundles = d.bundles || [];
+    const distinct = (d.similarity || {}).most_distinct || [];
+
+    questions.push({ section: "Overview", q: "What kinds of products are in this dataset?" });
+    if (ranking.length > 0) {
+      const top = ranking[0];
+      const name = comms[top]?.name || top;
+      questions.push({ section: "Overview", q: `What is ${name}?` });
+    }
+    for (const b of bundles.slice(0, 2)) {
+      if (b.label === "supplier brands") continue;
+      questions.push({ section: "Find", q: `I need ${b.label} supplies` });
+    }
+    if (distinct.length > 0) {
+      const cid = distinct[0];
+      const name = comms[cid]?.name || cid;
+      questions.push({ section: "Explore", q: `What's special about ${name}?` });
+    }
+  }
+
+  let lastSection = null;
+  let chips = null;
+  for (const { section, q } of questions) {
+    if (section !== lastSection) {
+      const label = document.createElement("div");
+      label.className = "starter-section";
+      label.textContent = section;
+      menu.appendChild(label);
+      chips = document.createElement("div");
+      chips.className = "starter-chips";
+      menu.appendChild(chips);
+      lastSection = section;
+    }
+    const chip = document.createElement("button");
+    chip.className = "starter-chip";
+    chip.textContent = q;
+    chip.addEventListener("click", () => {
+      menu.remove();
+      inputEl.value = q;
+      sendMessage();
+    });
+    chips.appendChild(chip);
+  }
+
+  chatEl.appendChild(menu);
+  chatEl.scrollTop = chatEl.scrollHeight;
+}
+
+// ── 1. Load scaffold from .dyf file ───────────────────────────────────────
+async function loadScaffold() {
+  try {
+    const { loadDyf } = await import("../js/dyf_reader.mjs");
+    const statusMsg = addMsg("system", "Loading .dyf...");
+    const dyf = await loadDyf("../data/gudid_viz.dyf", (msg) => {
+      statusMsg.textContent = msg;
+    });
+    statusMsg.remove();
+
+    // Store per-item data for RAG search
+    if (dyf.fields) {
+      dyfTitles = dyf.fields.title || null;
+      dyfCommunityIds = dyf.fields.community_id || null;
+      dyfPrimaryDis = dyf.fields.primary_di || null;
+    }
+    if (dyf.embeddings) {
+      dyfEmbeddings = dyf.embeddings;
+      dyfDim = dyf.embeddingDim;
+      dyfCount = dyf.totalItems;
+      console.log(`Loaded ${dyfCount} embeddings (${dyfDim}d) for RAG search`);
+    }
+
+    // Extract scaffold from .dyf metadata
+    const scaffoldJsonStr = dyf.metadata.get("llm_scaffold");
+    const scaffoldTextStr = dyf.metadata.get("llm_scaffold_text");
+    if (!scaffoldJsonStr || !scaffoldTextStr) {
+      throw new Error("No scaffold data in .dyf file");
+    }
+    scaffoldData = JSON.parse(scaffoldJsonStr);
+    scaffoldText = scaffoldTextStr;
+
+    // Extract centroids from louvain_dendrogram metadata
+    const dendroStr = dyf.metadata.get("louvain_dendrogram");
+    if (dendroStr) {
+      try {
+        const dendro = JSON.parse(dendroStr);
+        const rawCentroids = dendro.community_embedding_centroids || {};
+        centroids = {};
+        for (const [cid, vec] of Object.entries(rawCentroids)) {
+          centroids[cid] = new Float32Array(vec);
+        }
+      } catch(_) {}
+    }
+
+    // Load IDF index (still a separate JSON file)
+    try {
+      const idfResp = await fetch("../data/chat_idf_index.json");
+      if (idfResp.ok) idfIndex = await idfResp.json();
+    } catch(_) {}
+
+    buildCategoryNameMap();
+    const restored = restoreConversation();
+    if (!restored) {
+      addMsg("system", `Ready — ${scaffoldText.split("\\n")[0]}`);
+      showStarterMenu();
+    } else {
+      addMsg("system", "Conversation restored.");
+    }
+  } catch (e) {
+    addMsg("system", `Failed to load data: ${e.message}`);
+    console.error(e);
+  }
+}
+
+// ── 2. Load web-llm ──────────────────────────────────────────────────────
+async function loadLLM() {
+  setStatus("status-llm", "loading", "LLM...");
+  progArea.style.display = "block";
+  try {
+    const webllm = await import("https://esm.run/@mlc-ai/web-llm");
+    const modelId = "Qwen2.5-1.5B-Instruct-q4f16_1-MLC";
+    engine = await webllm.CreateMLCEngine(modelId, {
+      initProgressCallback: (report) => {
+        const pct = Math.round((report.progress || 0) * 100);
+        document.getElementById("prog-llm-label").textContent = `LLM: ${report.text || "loading..."}`;
+        document.getElementById("prog-llm-fill").style.width = pct + "%";
+      },
+    });
+    setStatus("status-llm", "ready", "LLM");
+    document.getElementById("prog-llm-label").textContent = "LLM: ready";
+    document.getElementById("prog-llm-fill").style.width = "100%";
+    setReady();
+  } catch (e) {
+    setStatus("status-llm", "error", "LLM");
+    document.getElementById("prog-llm-label").textContent = `LLM: ${e.message}`;
+    addMsg("system", `LLM load failed: ${e.message}`);
+    console.error(e);
+  }
+}
+
+// ── 3. Load kokoro-js TTS ────────────────────────────────────────────────
+async function loadTTS() {
+  setStatus("status-tts", "loading", "TTS...");
+  try {
+    const { KokoroTTS } = await import("https://cdn.jsdelivr.net/npm/kokoro-js@1.2.1/+esm");
+    tts = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", {
+      dtype: "q8",
+      progress_callback: (report) => {
+        if (report.status === "progress" && report.total) {
+          const pct = Math.round((report.loaded / report.total) * 100);
+          document.getElementById("prog-tts-label").textContent = `TTS: downloading... ${pct}%`;
+          document.getElementById("prog-tts-fill").style.width = pct + "%";
+        }
+      },
+    });
+    setStatus("status-tts", "ready", "TTS");
+    document.getElementById("prog-tts-label").textContent = "TTS: ready";
+    document.getElementById("prog-tts-fill").style.width = "100%";
+  } catch (e) {
+    setStatus("status-tts", "error", "TTS");
+    document.getElementById("prog-tts-label").textContent = `TTS: ${e.message}`;
+    audioCb.checked = false;
+    audioCb.disabled = true;
+    console.error(e);
+  }
+}
+
+// ── 4. Load embedding model ──────────────────────────────────────────────
+async function loadEmbedder() {
+  setStatus("status-embed", "loading", "Embed...");
+  try {
+    const { pipeline } = await import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/+esm");
+    embedder = await pipeline("feature-extraction", "nomic-ai/nomic-embed-text-v1.5", {
+      dtype: "q8",
+      progress_callback: (report) => {
+        if (report.status === "progress" && report.total) {
+          const pct = Math.round((report.loaded / report.total) * 100);
+          setStatus("status-embed", "loading", `Embed ${pct}%`);
+        }
+      },
+    });
+    setStatus("status-embed", "ready", "Embed");
+  } catch (e) {
+    setStatus("status-embed", "error", "Embed");
+    console.warn("Embedding model failed to load, falling back to IDF:", e);
+  }
+}
+
+// Semantic search: encode query, dot-product against centroids
+async function querySemantic(question) {
+  if (!embedder || !centroids) return null;
+  try {
+    const output = await embedder([`search_query: ${question}`], { pooling: "mean", normalize: true });
+    const qvec = new Float32Array(output.data);
+    const scores = [];
+    for (const [cid, cvec] of Object.entries(centroids)) {
+      let dot = 0, normC = 0;
+      for (let i = 0; i < qvec.length; i++) {
+        dot += qvec[i] * cvec[i];
+        normC += cvec[i] * cvec[i];
+      }
+      normC = Math.sqrt(normC);
+      scores.push({ cid, sim: normC > 0 ? dot / normC : 0 });
+    }
+    scores.sort((a, b) => b.sim - a.sim);
+    return scores;
+  } catch (e) {
+    console.warn("Semantic query failed:", e);
+    return null;
+  }
+}
+
+// ── Per-item search over .dyf embeddings ─────────────────────────────────
+function searchItems(queryVec, k = 10) {
+  if (!dyfEmbeddings || !queryVec) return [];
+
+  // Brute-force dot product over all items
+  const scores = new Float32Array(dyfCount);
+  for (let i = 0; i < dyfCount; i++) {
+    let dot = 0;
+    const base = i * dyfDim;
+    for (let j = 0; j < dyfDim; j++) {
+      dot += queryVec[j] * dyfEmbeddings[base + j];
+    }
+    scores[i] = dot;
+  }
+
+  // Partial sort: find top-K via selection
+  const topK = Math.min(k * 3, dyfCount); // oversample for dedup
+  const indices = Array.from({ length: dyfCount }, (_, i) => i);
+  // Partial sort — only need first topK elements sorted
+  indices.sort((a, b) => scores[b] - scores[a]);
+
+  // Deduplicate by title prefix (first 30 chars)
+  const seen = new Set();
+  const results = [];
+  for (let idx = 0; idx < topK && results.length < k; idx++) {
+    const i = indices[idx];
+    const title = dyfTitles ? (dyfTitles[i] || "") : "";
+    const prefix = title.slice(0, 30).toLowerCase();
+    if (seen.has(prefix)) continue;
+    seen.add(prefix);
+    results.push({
+      itemIndex: i,
+      communityId: dyfCommunityIds ? dyfCommunityIds[i] : -1,
+      score: scores[i],
+      title,
+      primaryDi: dyfPrimaryDis ? dyfPrimaryDis[i] : null,
+    });
+  }
+  return results;
+}
+
+// ── SSML helpers ─────────────────────────────────────────────────────────
+function stripSsml(text) {
+  return text
+    .replace(/<emphasis[^>]*>/gi, "")
+    .replace(/<\/emphasis>/gi, "")
+    .replace(/<break[^/]*\/>/gi, "")
+    .replace(/<break[^>]*>[^<]*<\/break>/gi, "")
+    .replace(/\s*\[\d+\]\s*/g, " ")
+    .replace(/[─━═│┃┌┐└┘├┤┬┴┼╭╮╰╯]+/g, "")
+    .replace(/^[*\-#>]{1,4}\s?/gm, "")
+    .replace(/\*{1,2}([^*]+)\*{1,2}/g, "$1")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/^\s*[-─]+\s*$/gm, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/  +/g, " ")
+    .trim();
+}
+
+// ── TTS with word highlighting ────────────────────────────────────────────
+function wrapWordsInSpans(el, text) {
+  el.textContent = "";
+  const tokens = text.split(/(\s+)/);
+  const spans = [];
+  for (const token of tokens) {
+    if (/^\s+$/.test(token)) {
+      el.appendChild(document.createTextNode(token));
+    } else {
+      const span = document.createElement("span");
+      span.textContent = token;
+      span.dataset.word = "true";
+      el.appendChild(span);
+      spans.push(span);
+    }
+  }
+  return spans;
+}
+
+function highlightWord(spans, index) {
+  for (const s of spans) s.classList.remove("word-highlight");
+  if (index >= 0 && index < spans.length) {
+    spans[index].classList.add("word-highlight");
+    spans[index].scrollIntoView({ block: "nearest" });
+  }
+}
+
+async function speakBrowser(el, text) {
+  const spans = wrapWordsInSpans(el, text);
+  return new Promise((resolve) => {
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 1.1;
+    let wordIndex = 0;
+    utter.onboundary = (e) => {
+      if (e.name === "word") {
+        const before = text.slice(0, e.charIndex);
+        wordIndex = before.split(/\s+/).filter(Boolean).length;
+        highlightWord(spans, wordIndex);
+      }
+    };
+    utter.onend = () => { highlightWord(spans, -1); resolve(); };
+    utter.onerror = () => { highlightWord(spans, -1); resolve(); };
+    speechSynthesis.speak(utter);
+  });
+}
+
+async function speakKokoro(el, text) {
+  if (!tts) { await speakBrowser(el, text); return; }
+
+  // Show pulsing progress during generation
+  let fill = el.querySelector(".render-fill");
+  if (!fill) {
+    fill = document.createElement("div");
+    fill.className = "render-fill";
+    el.insertBefore(fill, el.firstChild);
+  }
+  fill.classList.add("generating");
+  fill.classList.remove("playing");
+  fill.style.width = "";
+
+  const spans = wrapWordsInSpans(el, text);
+  try {
+    const result = await tts.generate(text, { voice: "af_heart" });
+
+    // Switch to playback progress
+    fill.classList.remove("generating");
+    fill.classList.add("playing");
+
+    const sampleRate = result.sampling_rate || 24000;
+    const samples = result.audio || result.data;
+    const duration = samples.length / sampleRate;
+    const words = text.split(/\s+/).filter(Boolean);
+    const msPerWord = (duration * 1000) / words.length;
+
+    if (!audioCtx) audioCtx = new AudioContext({ sampleRate: 24000 });
+    if (audioCtx.state === "suspended") await audioCtx.resume();
+    const floats = samples instanceof Float32Array ? samples : new Float32Array(samples);
+    const buf = audioCtx.createBuffer(1, floats.length, sampleRate);
+    buf.getChannelData(0).set(floats);
+    const src = audioCtx.createBufferSource();
+    src.buffer = buf;
+    src.connect(audioCtx.destination);
+    src.start(0);
+    activeAudioSrc = src;
+
+    for (let i = 0; i < spans.length; i++) {
+      if (abortCtrl && abortCtrl.signal.aborted) break;
+      highlightWord(spans, i);
+      fill.style.width = `${((i + 1) / spans.length * 100).toFixed(1)}%`;
+      await new Promise(r => setTimeout(r, msPerWord));
+    }
+    highlightWord(spans, -1);
+    fill.style.width = "0%";
+    fill.classList.remove("playing");
+    activeAudioSrc = null;
+  } catch (e) {
+    console.warn("Kokoro TTS failed, falling back to browser:", e);
+    fill.classList.remove("generating", "playing");
+    fill.style.width = "0%";
+    highlightWord(spans, -1);
+    await speakBrowser(el, text);
+  }
+}
+
+async function speakWithHighlight(el, text) {
+  if (ttsSelect.value === "browser") await speakBrowser(el, text);
+  else await speakKokoro(el, text);
+}
+
+// ── RAG logic ────────────────────────────────────────────────────────────
+const SYSTEM_PROMPT = `You help someone explore a dataset. Your responses will be read aloud.
+
+STRICT RULES:
+- ONLY state facts from the DATA below. NEVER invent, infer, or elaborate beyond what is listed.
+- Plain text only. No markdown, no bullet points, no dashes, no special characters.
+- Refer to categories by name, not ID numbers. Never show bracket IDs like [5].
+- Say "category" or "group" instead of "community".
+- 2-4 short sentences max. Be direct.
+- When comparing, say "closely related" or "very different" — no numeric scores.
+- When RELATED CATEGORIES are listed, mention the most relevant ones by name.
+- When MATCHING PRODUCTS are listed, cite specific product names as examples.
+
+DATA:
+`;
+
+function detectFocusCategory(question) {
+  if (!scaffoldData) return null;
+  const qLower = question.toLowerCase();
+  const comms = scaffoldData.communities || {};
+  let best = null, bestLen = 0;
+  for (const [cid, info] of Object.entries(comms)) {
+    const name = info.name.toLowerCase();
+    if (qLower.includes(name) && name.length > bestLen) {
+      best = cid; bestLen = name.length;
+    }
+  }
+  return best;
+}
+
+function findBundle(cid) {
+  if (!scaffoldData) return null;
+  for (const b of scaffoldData.bundles || []) {
+    if (b.members.includes(cid)) return b;
+  }
+  return null;
+}
+
+function findSimilar(cid, limit = 3) {
+  if (!scaffoldData?.similarity?.top_pairs) return [];
+  const matches = [];
+  for (const p of scaffoldData.similarity.top_pairs) {
+    if (p.a === cid) matches.push(p.b);
+    else if (p.b === cid) matches.push(p.a);
+    if (matches.length >= limit) break;
+  }
+  return matches;
+}
+
+async function queryRag(question) {
+  const comms = scaffoldData?.communities || {};
+  const getName = (cid) => comms[cid]?.name || `Category ${cid}`;
+  const getSize = (cid) => comms[cid]?.size || 0;
+
+  const focusCid = detectFocusCategory(question);
+  const semanticScores = await querySemantic(question);
+
+  // Per-item embedding search
+  let itemResults = [];
+  if (dyfEmbeddings && embedder) {
+    try {
+      const output = await embedder([`search_query: ${question}`], { pooling: "mean", normalize: true });
+      const qvec = new Float32Array(output.data);
+      itemResults = searchItems(qvec, 10);
+    } catch (e) {
+      console.warn("Item search failed:", e);
+    }
+  }
+
+  const catScores = {};
+  if (idfIndex) {
+    const terms = question.toLowerCase().match(/[a-z]{3,}/g) || [];
+    for (const term of terms) {
+      const cats = idfIndex.terms[term];
+      if (!cats) continue;
+      for (let i = 0; i < cats.length; i++) {
+        const cid = cats[i];
+        catScores[cid] = (catScores[cid] || 0) + (3 - i);
+      }
+    }
+  }
+
+  const topCids = [];
+  if (semanticScores) {
+    for (const { cid, sim } of semanticScores) {
+      if (sim > 0.3 && topCids.length < 5) topCids.push(cid);
+    }
+  }
+  const idfSorted = Object.entries(catScores).sort((a, b) => b[1] - a[1]);
+  for (const [cid] of idfSorted) {
+    if (!topCids.includes(cid) && topCids.length < 5) topCids.push(cid);
+  }
+
+  const lines = [];
+
+  if (focusCid) {
+    // Focused query: category description + matching products + related
+    const bundle = findBundle(focusCid);
+    if (bundle && bundle.members.length > 1) {
+      const siblings = bundle.members.filter(c => c !== focusCid);
+      lines.push(`\nRELATED CATEGORIES in the "${bundle.label}" group:`);
+      for (const c of siblings) {
+        lines.push(`  ${getName(c)} (${getSize(c).toLocaleString()} items)`);
+      }
+    }
+    const similar = findSimilar(focusCid);
+    if (similar.length > 0) {
+      const sibSet = new Set(bundle?.members || []);
+      const novel = similar.filter(c => c !== focusCid && !sibSet.has(c));
+      if (novel.length > 0) {
+        lines.push(`\nMOST SIMILAR categories to ${getName(focusCid)}:`);
+        for (const c of novel) {
+          lines.push(`  ${getName(c)} (${getSize(c).toLocaleString()} items)`);
+        }
+      }
+    }
+
+    // Add matching products from representatives
+    const focusProducts = itemResults
+      .filter(r => String(r.communityId) === focusCid && r.title)
+      .slice(0, 8);
+    if (focusProducts.length > 0) {
+      lines.push(`\nMATCHING PRODUCTS in ${getName(focusCid)}:`);
+      for (const r of focusProducts) lines.push(`  - ${r.title}`);
+    }
+  } else {
+    // Broad query: matching products with community names + category descriptions
+    const matchedBundles = new Set();
+    for (const cid of topCids.slice(0, 3)) {
+      const b = findBundle(cid);
+      if (b && !matchedBundles.has(b.label)) {
+        matchedBundles.add(b.label);
+        lines.push(`\n"${b.label}" group (${b.total_items.toLocaleString()} items total):`);
+        for (const m of b.member_details) {
+          lines.push(`  ${m.name} (${m.size.toLocaleString()} items)`);
+        }
+      }
+    }
+
+    // Add matching products from representatives (broad query)
+    if (itemResults.length > 0) {
+      lines.push(`\nMATCHING PRODUCTS:`);
+      for (const r of itemResults.slice(0, 10)) {
+        const catName = getName(String(r.communityId));
+        if (r.title) lines.push(`  - ${r.title} [${catName}]`);
+      }
+    }
+  }
+
+  // Product table data from embedding-matched items (all linkable)
+  const tableData = [];
+  if (itemResults.length > 0) {
+    const repByCommunity = {};
+    for (const r of itemResults) {
+      const cid = String(r.communityId);
+      if (!repByCommunity[cid]) repByCommunity[cid] = [];
+      if (r.title && repByCommunity[cid].length < 10) {
+        repByCommunity[cid].push({ title: r.title, primaryDi: r.primaryDi });
+      }
+    }
+    for (const [cid, items] of Object.entries(repByCommunity)) {
+      if (items.length > 0) {
+        tableData.push({ cid, name: getName(cid), size: getSize(cid), items });
+      }
+    }
+  }
+
+  return { prompt: lines.length > 0 ? "\n" + lines.join("\n") : "", tables: tableData };
+}
+
+function renderProductTables(parentEl, tables) {
+  if (!tables || tables.length === 0) return;
+  const container = document.createElement("div");
+  container.className = "product-tables";
+
+  for (const { cid, name, size, items } of tables) {
+    const card = document.createElement("div");
+    card.className = "product-table";
+    const header = document.createElement("div");
+    header.className = "product-table-header";
+    const catName = document.createElement("span");
+    catName.className = "cat-name";
+    catName.textContent = name;
+    catName.addEventListener("click", (e) => {
+      e.stopPropagation();
+      window.parent.postMessage({ type: "category-clicked", name }, "*");
+    });
+    const catMeta = document.createElement("span");
+    catMeta.className = "cat-meta";
+    catMeta.textContent = `${size.toLocaleString()} items`;
+    header.appendChild(catName);
+    header.appendChild(catMeta);
+
+    const itemsDiv = document.createElement("div");
+    itemsDiv.className = "product-table-items";
+    for (const item of items) {
+      if (item.primaryDi) {
+        const link = document.createElement("a");
+        link.href = GUDID_URL + encodeURIComponent(item.primaryDi);
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = item.title;
+        link.title = item.title;
+        link.className = "product-link";
+        itemsDiv.appendChild(link);
+      } else {
+        const pill = document.createElement("span");
+        pill.textContent = item.title;
+        pill.title = item.title;
+        itemsDiv.appendChild(pill);
+      }
+    }
+    header.addEventListener("click", () => {
+      itemsDiv.style.display = itemsDiv.style.display === "none" ? "" : "none";
+    });
+
+    card.appendChild(header);
+    card.appendChild(itemsDiv);
+    container.appendChild(card);
+  }
+  parentEl.appendChild(container);
+}
+
+// ── Chat ─────────────────────────────────────────────────────────────────
+function stopGeneration() {
+  if (abortCtrl) abortCtrl.abort();
+  if (activeAudioSrc) { try { activeAudioSrc.stop(); } catch(_) {} activeAudioSrc = null; }
+  speechSynthesis.cancel();
+}
+
+async function sendMessage() {
+  const text = inputEl.value.trim();
+  if (!text || generating || !engine || !scaffoldText) return;
+
+  const starterMenu = document.getElementById("starter-menu");
+  if (starterMenu) starterMenu.remove();
+
+  generating = true;
+  abortCtrl = new AbortController();
+  const signal = abortCtrl.signal;
+  sendBtn.style.display = "none";
+  stopBtn.style.display = "inline-block";
+  inputEl.value = "";
+
+  addMsg("user", text);
+  const assistantDiv = addMsg("assistant", "");
+
+  // Phase 1: Embed query + RAG search
+  pillOn("status-embed");
+  const rag = await queryRag(text);
+  pillOff("status-embed");
+
+  if (signal.aborted) { finishGeneration(assistantDiv, null); return; }
+
+  let fullResponse = "";
+  try {
+    // Phase 2: LLM streaming
+    pillOn("status-llm");
+    const stream = await engine.chat.completions.create({
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT + scaffoldText + rag.prompt },
+        { role: "user", content: text },
+      ],
+      stream: true,
+      temperature: 0.3,
+      max_tokens: 300,
+    });
+
+    for await (const chunk of stream) {
+      if (signal.aborted) break;
+      const delta = chunk.choices[0]?.delta?.content || "";
+      fullResponse += delta;
+      assistantDiv.textContent = stripSsml(fullResponse);
+      chatEl.scrollTop = chatEl.scrollHeight;
+    }
+    pillOff("status-llm");
+
+    if (signal.aborted) { finishGeneration(assistantDiv, fullResponse); return; }
+
+    // Phase 3: TTS
+    const displayText = stripSsml(fullResponse);
+    if (audioCb.checked && displayText) {
+      pillOn("status-tts");
+      await speakWithHighlight(assistantDiv, displayText);
+      pillOff("status-tts");
+    }
+
+    finishGeneration(assistantDiv, fullResponse, rag.tables);
+    saveConversation();
+  } catch (e) {
+    pillOff("status-llm");
+    pillOff("status-tts");
+    if (!signal.aborted) {
+      assistantDiv.textContent = `Error: ${e.message}`;
+      console.error(e);
+    }
+    finishGeneration(assistantDiv, fullResponse);
+  }
+}
+
+function finishGeneration(assistantDiv, fullResponse, tables) {
+  // Clean up text, add links and tables
+  if (fullResponse) {
+    const displayText = stripSsml(fullResponse);
+    assistantDiv.textContent = displayText;
+    linkifyCategoryNames(assistantDiv);
+    if (tables) renderProductTables(assistantDiv, tables);
+    // Clear any TTS render-fill
+    const fill = assistantDiv.querySelector(".render-fill");
+    if (fill) { fill.classList.remove("generating", "playing"); fill.style.width = "0%"; }
+  }
+  chatEl.scrollTop = chatEl.scrollHeight;
+
+  generating = false;
+  abortCtrl = null;
+  activeAudioSrc = null;
+  stopBtn.style.display = "none";
+  sendBtn.style.display = "";
+  sendBtn.disabled = false;
+  inputEl.focus();
+}
+
+sendBtn.addEventListener("click", sendMessage);
+stopBtn.addEventListener("click", stopGeneration);
+inputEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+});
+
+// ── postMessage bridge ───────────────────────────────────────────────────
+window.addEventListener("message", (e) => {
+  if (!e.data || typeof e.data !== "object") return;
+
+  if (e.data.type === "ask-about") {
+    // Parent page wants us to ask about a category
+    askAboutCategory(e.data.name);
+  } else if (e.data.type === "set-theme") {
+    setTheme(e.data.light);
+  }
+});
+
+// ── Init ─────────────────────────────────────────────────────────────────
+await loadScaffold();
+setReady();
+loadLLM();
+loadTTS();
+loadEmbedder();
+
+// Hide progress bar once all models done
+const checkDone = setInterval(() => {
+  const isDone = (id) => {
+    const el = document.getElementById(id);
+    return el.classList.contains("ready") || el.classList.contains("error");
+  };
+  if (isDone("status-llm") && isDone("status-tts") && isDone("status-embed")) {
+    setTimeout(() => { progArea.style.display = "none"; }, 2000);
+    clearInterval(checkDone);
+  }
+}, 500);
+</script>
+</body>
+</html>
