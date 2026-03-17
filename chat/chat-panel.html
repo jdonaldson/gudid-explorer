@@ -573,22 +573,44 @@ async function loadLLM() {
 }
 
 // ── 3. Load kokoro-js TTS ────────────────────────────────────────────────
+let ttsBackend = "wasm"; // tracks which backend is active
 async function loadTTS() {
   setStatus("status-tts", "loading", "TTS...");
+  const progressCb = (report) => {
+    if (report.status === "progress" && report.total) {
+      const pct = Math.round((report.loaded / report.total) * 100);
+      document.getElementById("prog-tts-label").textContent = `TTS: downloading... ${pct}%`;
+      document.getElementById("prog-tts-fill").style.width = pct + "%";
+    }
+  };
   try {
     const { KokoroTTS } = await import("https://cdn.jsdelivr.net/npm/kokoro-js@1.2.1/+esm");
-    tts = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", {
-      dtype: "q8",
-      progress_callback: (report) => {
-        if (report.status === "progress" && report.total) {
-          const pct = Math.round((report.loaded / report.total) * 100);
-          document.getElementById("prog-tts-label").textContent = `TTS: downloading... ${pct}%`;
-          document.getElementById("prog-tts-fill").style.width = pct + "%";
-        }
-      },
-    });
-    setStatus("status-tts", "ready", "TTS");
-    document.getElementById("prog-tts-label").textContent = "TTS: ready";
+
+    // Try WebGPU first (fp32, ~10x faster), fall back to WASM (q8)
+    let hasWebGPU = false;
+    try { hasWebGPU = !!navigator.gpu && !!(await navigator.gpu.requestAdapter()); } catch {}
+
+    if (hasWebGPU) {
+      try {
+        document.getElementById("prog-tts-label").textContent = "TTS: loading (WebGPU)...";
+        tts = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", {
+          dtype: "fp32", device: "webgpu", progress_callback: progressCb,
+        });
+        ttsBackend = "webgpu";
+      } catch (e) {
+        console.warn("WebGPU TTS failed, falling back to WASM:", e.message);
+        tts = null;
+      }
+    }
+    if (!tts) {
+      document.getElementById("prog-tts-label").textContent = "TTS: loading (WASM)...";
+      tts = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", {
+        dtype: "q8", progress_callback: progressCb,
+      });
+      ttsBackend = "wasm";
+    }
+    setStatus("status-tts", "ready", `TTS (${ttsBackend})`);
+    document.getElementById("prog-tts-label").textContent = `TTS: ready (${ttsBackend})`;
     document.getElementById("prog-tts-fill").style.width = "100%";
   } catch (e) {
     setStatus("status-tts", "error", "TTS");
@@ -749,6 +771,21 @@ async function speakBrowser(el, text) {
   });
 }
 
+function splitSentences(text) {
+  // Split on sentence boundaries, keeping delimiters attached
+  const parts = text.match(/[^.!?]+[.!?]+[\s]*/g) || [text];
+  // Merge tiny fragments (< 10 chars) into the previous sentence
+  const merged = [];
+  for (const p of parts) {
+    if (merged.length && p.trim().length < 10) {
+      merged[merged.length - 1] += p;
+    } else {
+      merged.push(p);
+    }
+  }
+  return merged.map(s => s.trim()).filter(Boolean);
+}
+
 async function speakKokoro(el, text) {
   if (!tts) { await speakBrowser(el, text); return; }
 
@@ -764,36 +801,64 @@ async function speakKokoro(el, text) {
   fill.style.width = "";
 
   const spans = wrapWordsInSpans(el, text);
+  const totalWords = spans.length;
+
   try {
-    const result = await tts.generate(text, { voice: "af_heart" });
-
-    // Switch to playback progress
-    fill.classList.remove("generating");
-    fill.classList.add("playing");
-
-    const sampleRate = result.sampling_rate || 24000;
-    const samples = result.audio || result.data;
-    const duration = samples.length / sampleRate;
-    const words = text.split(/\s+/).filter(Boolean);
-    const msPerWord = (duration * 1000) / words.length;
-
     if (!audioCtx) audioCtx = new AudioContext({ sampleRate: 24000 });
     if (audioCtx.state === "suspended") await audioCtx.resume();
-    const floats = samples instanceof Float32Array ? samples : new Float32Array(samples);
-    const buf = audioCtx.createBuffer(1, floats.length, sampleRate);
-    buf.getChannelData(0).set(floats);
-    const src = audioCtx.createBufferSource();
-    src.buffer = buf;
-    src.connect(audioCtx.destination);
-    src.start(0);
-    activeAudioSrc = src;
 
-    for (let i = 0; i < spans.length; i++) {
+    // Split into sentences and pipeline: generate sentence N+1 while playing N
+    const sentences = splitSentences(text);
+    let wordOffset = 0;
+
+    // Pre-generate first sentence
+    let nextResult = tts.generate(sentences[0], { voice: "af_heart" });
+
+    for (let si = 0; si < sentences.length; si++) {
       if (abortCtrl && abortCtrl.signal.aborted) break;
-      highlightWord(spans, i);
-      fill.style.width = `${((i + 1) / spans.length * 100).toFixed(1)}%`;
-      await new Promise(r => setTimeout(r, msPerWord));
+
+      const result = await nextResult;
+
+      // Start generating next sentence while we play this one
+      if (si + 1 < sentences.length) {
+        nextResult = tts.generate(sentences[si + 1], { voice: "af_heart" });
+      }
+
+      // Switch to playback mode on first sentence
+      if (si === 0) {
+        fill.classList.remove("generating");
+        fill.classList.add("playing");
+      }
+
+      const sampleRate = result.sampling_rate || 24000;
+      const samples = result.audio || result.data;
+      const floats = samples instanceof Float32Array ? samples : new Float32Array(samples);
+      const duration = floats.length / sampleRate;
+      const sentenceWords = sentences[si].split(/\s+/).filter(Boolean);
+      const msPerWord = (duration * 1000) / sentenceWords.length;
+
+      // Play this sentence
+      const buf = audioCtx.createBuffer(1, floats.length, sampleRate);
+      buf.getChannelData(0).set(floats);
+      const src = audioCtx.createBufferSource();
+      src.buffer = buf;
+      src.connect(audioCtx.destination);
+      src.start(0);
+      activeAudioSrc = src;
+
+      // Highlight words for this sentence
+      for (let wi = 0; wi < sentenceWords.length; wi++) {
+        if (abortCtrl && abortCtrl.signal.aborted) break;
+        const globalIdx = wordOffset + wi;
+        if (globalIdx < totalWords) {
+          highlightWord(spans, globalIdx);
+          fill.style.width = `${((globalIdx + 1) / totalWords * 100).toFixed(1)}%`;
+        }
+        await new Promise(r => setTimeout(r, msPerWord));
+      }
+      wordOffset += sentenceWords.length;
     }
+
     highlightWord(spans, -1);
     fill.style.width = "0%";
     fill.classList.remove("playing");
