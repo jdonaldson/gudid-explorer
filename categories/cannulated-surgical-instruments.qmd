@@ -1,0 +1,39 @@
+---
+title: "Cannulated surgical instruments"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 2,111 items
+:::
+
+Cannulated surgical instruments are specialised tools that allow surgeons to thread them through body cavities, creating a clear pathway for other devices. They include a range of flexible tubes, stents and catheters used in many areas from urology to orthopaedics. This collection contains roughly about two thousand one hundred distinct items.
+
+## Sample Products
+
+| Product |
+|---------|
+| Adelante SafeSheath Ultra Lite - Peel-Away Introducer with Hemostatic Valve, 11F |
+| Pacific™ Plus - CATH PCP040080090 PCP D4.00 L 80 UL 900 |
+| SUB-Q - 36" Single SUB-Q set, 6mm needle and 27-gauge w/Dressing, Box of 10 |
+| LoFric® Primo™ - Single Use Urinary Catheter LoFric Primo Nelaton 8" 08FR Paediatric |
+| Anodyne Surgical - Anterior Chamber Cannula 27g X 3mm bend |
+
+## Related Categories
+
+**Most similar:**
+
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd)
+
+**In the orthopedic group:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Cannulated surgical instruments')">
+  Ask about this category
+</button>

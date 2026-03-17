@@ -1,0 +1,40 @@
+---
+title: "Bone Drills & Screws"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 3,259 items
+:::
+
+Bone Drills & Screws. This group contains surgical instruments and hardware used in bone cutting and fixation, from burrs to rings and screws that support bone and joint procedures. The collection holds about three thousand three hundred distinct items.
+
+## Sample Products
+
+| Product |
+|---------|
+| TriLeap Lower Extremity Anatomic Plating System - 22MM Cannulated Cone Reamer |
+| EXPert Nail - 10MM TI CANNULATED TIBIAL NAIL-EX/255MM-STERILE |
+| NORDENT MANUFACTURING INC - CURETTE, DOUBLE END, GRACEY #11-12 FINE, DURALITE ROUND HANDLE |
+| General Instruments - ALIF Cup Curette Straight, Size 06 |
+| TRIGEN - FEMORAL ANTEGRADE NAIL LIME 13MM X                                    46CM LEFT  |
+
+## Related Categories
+
+**Most similar:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd)
+
+**In the orthopedic group:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Bone Drills & Screws')">
+  Ask about this category
+</button>

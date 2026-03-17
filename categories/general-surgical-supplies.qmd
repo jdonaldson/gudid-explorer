@@ -1,0 +1,40 @@
+---
+title: "General Surgical Supplies"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 2,931 items
+:::
+
+General Surgical Supplies. This collection contains a wide range of everyday tools and materials that surgeons use to perform operations safely and efficiently, from simple tubes and sutures to specialised implants and diagnostic devices. It comprises about two thousand nine hundred distinct items.
+
+## Sample Products
+
+| Product |
+|---------|
+| Tau MMab - Tau is a mouse monoclonal antibody derived from cell culture supernatant that is |
+| Rymed - 7” Microbore Extension Set with 1.2 Micron Filter |
+| Bausch + Lomb - CANNULA LACRIMAL BAILEY |
+| ARCHITECT - Quantia ASO |
+| CTR2150CEUH - diagnostic x-ray tube housing assembly |
+
+## Related Categories
+
+**Most similar:**
+
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd)
+
+**In the orthopedic group:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('General Surgical Supplies')">
+  Ask about this category
+</button>

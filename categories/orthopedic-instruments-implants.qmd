@@ -1,0 +1,31 @@
+---
+title: "Orthopedic Instruments & Implants"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **sizing + final product** group &middot; 3,152 items
+:::
+
+Orthopedic Instruments & Implants is a collection of tools and devices that surgeons use to diagnose, treat and support bone and joint conditions. The items range from specialised plates and drills to ergonomic supports that help doctors perform procedures with precision and care. There are about three thousand two hundred items in this group, offering a comprehensive array of options for a wide variety of medical needs.
+
+## Sample Products
+
+| Product |
+|---------|
+| R3 - LINER IMPACTOR - 32MM |
+| CHESAPEAKE® Stabilization System - Rasp, Size 13x18x5 mm |
+| APEX 3D Total Ankle Replacement System - Tibia, Arc, Left, Size 2, Long, 3DP |
+| PRECISE OFFSET PARTIAL - PRECISE OFFSET PARTIAL 2.25MM LENGTH TITANIUM |
+| Columbus® REVISION F - COLUMBUS REV F FEMUR CEMENTED F3L |
+
+## Related Categories
+
+**In the sizing + final product group:**
+
+- [Polyaxial Cannulated Pedicle Screws](polyaxial-cannulated-pedicle-screws.qmd) (5,997 items)
+- [Spinal Interbody Cages](spinal-interbody-cages.qmd) (2,898 items)
+- [Polyaxial Cannulated Trial Plates](polyaxial-cannulated-trial-plates.qmd) (1,096 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Orthopedic Instruments & Implants')">
+  Ask about this category
+</button>

@@ -1,0 +1,30 @@
+---
+title: "Custom Perfusion Pack Sets"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **supplier brands** group &middot; 223 items
+:::
+
+Custom Perfusion Pack Sets. This collection comprises ready to use kits that combine pumps, cannulae, filters and other components for safe and efficient blood flow during medical procedures. There are about two hundred distinct sets in this group.
+
+## Sample Products
+
+| Product |
+|---------|
+| NA - CUSTOM PACK CB8T45R1 1/4 PACK |
+| NA - CUSTOM PACK BB11T95R6 BAPTIST ACC |
+| NA - CUSTOM PACK 8E61R1 5PK 3/8 O2 EXC |
+| Intersept® - CONN CB4630 INTERSEPT 1/4 X 1/4 LL 10PK |
+| NA - CUSTOM PACK BB4M03R3 2PK 3/8 VEN |
+
+## Related Categories
+
+**In the supplier brands group:**
+
+- [Medline Surgical Supplies](medline-surgical-supplies.qmd) (1,568 items)
+- [Cardinal Health surgical packs](cardinal-health-surgical-packs.qmd) (833 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Custom Perfusion Pack Sets')">
+  Ask about this category
+</button>

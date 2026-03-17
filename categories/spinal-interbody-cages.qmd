@@ -1,0 +1,31 @@
+---
+title: "Spinal Interbody Cages"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **sizing + final product** group &middot; 2,898 items
+:::
+
+Spinal Interbody Cages. These are the devices that surgeons use to bridge gaps in the spinal column, providing support and stability during recovery. The collection contains about two thousand nine hundred different variations, each designed to fit a particular patient need.
+
+## Sample Products
+
+| Product |
+|---------|
+| IVA Cage Ti - Posterior Lumbar Interbody Fusion Titanium CageL30 x W10 x H12 x A0 |
+| Aurora Spine - VOX Lumbar Interbody Fusion System, 40mm x 22mm x 8 degrees x 17mm, UNCOATED |
+| Plateau V & Z - Plateau-V Undersized Trial 28mm x 10mm, Modified Hudson |
+| Zavation - Ti3Z CIF 14mmx16mmx12mm -0 deg |
+| TiWAVE C Cervical Cage System - Cervical rasp, flat, 19mm x 14mm, 10mm, 7 degree, tapered |
+
+## Related Categories
+
+**In the sizing + final product group:**
+
+- [Polyaxial Cannulated Pedicle Screws](polyaxial-cannulated-pedicle-screws.qmd) (5,997 items)
+- [Orthopedic Instruments & Implants](orthopedic-instruments-implants.qmd) (3,152 items)
+- [Polyaxial Cannulated Trial Plates](polyaxial-cannulated-trial-plates.qmd) (1,096 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Spinal Interbody Cages')">
+  Ask about this category
+</button>

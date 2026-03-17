@@ -1,0 +1,30 @@
+---
+title: "Cardinal Health surgical packs"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **supplier brands** group &middot; 833 items
+:::
+
+Cardinal Health surgical packs. These are ready to use kits and supplies that doctors and nurses can pull straight from the shelf when they need to perform surgeries or treat patients. There are about eight hundred different items in this collection.
+
+## Sample Products
+
+| Product |
+|---------|
+| CARDINAL HEALTH - STERILE BIOPSY RADIOLOGY PACK |
+| CARDINAL HEALTH - CENT LN W TGADRM CHG W DRAPE |
+| CARDINAL HEALTH - STR 212330 GYNE ABDOMINAL PACK |
+| CARDINAL HEALTH - NON-ADHERENT PADS 3X8IN STERILE, LF |
+| CARDINAL HEALTH - HC TURP PK CONCEPTION |
+
+## Related Categories
+
+**In the supplier brands group:**
+
+- [Medline Surgical Supplies](medline-surgical-supplies.qmd) (1,568 items)
+- [Custom Perfusion Pack Sets](custom-perfusion-pack-sets.qmd) (223 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Cardinal Health surgical packs')">
+  Ask about this category
+</button>

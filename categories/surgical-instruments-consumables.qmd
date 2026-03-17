@@ -1,0 +1,39 @@
+---
+title: "Surgical instruments & consumables"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 2,948 items
+:::
+
+Surgical instruments & consumables are the tools and disposables that surgeons use during operations. These items range from delicate scissors and forceps to specialised devices and sterile gloves, all designed to support the precise and safe execution of medical procedures. There are about two thousand nine hundred different items in this collection, offering a vast range of options for the operating theatre.
+
+## Sample Products
+
+| Product |
+|---------|
+| Speedlock - Johan Grasping Forceps, 5mm, 22mm Slightly Flat Jaws with Ratchet Handle: 8510-0 |
+| MicroFrance® - MicroFrance® Gayet bipolar forceps, fenestrated jaws, 3.5 mm diameter, 330 mm le |
+| Raina Medical Devices - STERILE Non-Stick Bipolar Forceps Bayonet - 11" (28 cm), 1.5 mm Tip |
+| BOSS Instruments - Biopsy Fcps, Oval, Monopolar, 5mm, 45cm, Flushable |
+| Reicodent - EXTRACT 1100 - Extracting forceps # 74NBiscuspids |
+
+## Related Categories
+
+**Most similar:**
+
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd)
+
+**In the orthopedic group:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Surgical instruments & consumables')">
+  Ask about this category
+</button>

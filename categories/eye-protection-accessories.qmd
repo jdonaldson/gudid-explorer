@@ -1,0 +1,29 @@
+---
+title: "Eye Protection & Accessories"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **sensory/protective** group &middot; 400 items
+:::
+
+Eye Protection & Accessories. This section gathers all the gear you need to keep your eyes safe and comfortable, from safety goggles and protective glasses to contact lens cases and eye care accessories. It contains about four hundred different items.
+
+## Sample Products
+
+| Product |
+|---------|
+| BBIG - F20049335 |
+| Zac Posen - Florian Black Spectacle |
+| read on - 3 mm eyewear, black, +2.5 dpt, not packaged |
+| Islander Eyes - ISLANDER EYES 485 POLARIZED SUNGLASSES |
+| EYEWEAR BY ROI ADA PINK/BLACK - 54-18-135  PINK/BLACK  WITTNAUER |
+
+## Related Categories
+
+**In the sensory/protective group:**
+
+- [Hearing Aid & Ear Instruments](hearing-aid-ear-instruments.qmd) (1,109 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Eye Protection & Accessories')">
+  Ask about this category
+</button>

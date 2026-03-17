@@ -1,0 +1,29 @@
+---
+title: "Hearing Aid & Ear Instruments"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **sensory/protective** group &middot; 1,109 items
+:::
+
+Hearing Aid & Ear Instruments. This collection contains a wide range of medical devices used for hearing assistance and ear examination, including hearing aids, ear specula, thermometers and a variety of surgical tools. There are about one thousand one hundred items in this group.
+
+## Sample Products
+
+| Product |
+|---------|
+| GN ReSound - HI,AGX2 L961-DRW,PRL WHT |
+| Phonak - Phonak Audéo V90-312T (velvet black) |
+| Signia - Signia PURE C&G 7AX hearing aid / SLH |
+| SIGNIA - HA INTUIS M 4.0 GPH |
+| Sonic - CV40 MNR T, 2.4G NFM DG DEMO CAPTIVATE 40 |
+
+## Related Categories
+
+**In the sensory/protective group:**
+
+- [Eye Protection & Accessories](eye-protection-accessories.qmd) (400 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Hearing Aid & Ear Instruments')">
+  Ask about this category
+</button>

@@ -1,0 +1,31 @@
+---
+title: "Polyaxial Cannulated Trial Plates"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **sizing + final product** group &middot; 1,096 items
+:::
+
+Polyaxial Cannulated Trial Plates. These are a range of surgical instruments used in spine operations to test and position implants before they are permanently fixed, allowing surgeons to adjust angles and confirm fit with great precision. There are about one thousand one hundred items in this collection.
+
+## Sample Products
+
+| Product |
+|---------|
+| VA-LCP - 2.4MM TI VA-LCP 2-CLMN VLR DST RADIUS PL 6H HD/2H SHAFT/RT |
+| TC-100 - ADULT BLD PL 130 DEG 9H 70MM BLD                                    LGTH 152MM S |
+| N/A - PULP * Rt/4H |
+| Peri-Loc - SHORT LATERAL DISTAL FEMUR                                    TARGETER RIGHT FOR |
+| P.A.C.E. - P.A.C.E. MTP Fusion Revision Plate, 2,5/2,8mm System, Right |
+
+## Related Categories
+
+**In the sizing + final product group:**
+
+- [Polyaxial Cannulated Pedicle Screws](polyaxial-cannulated-pedicle-screws.qmd) (5,997 items)
+- [Orthopedic Instruments & Implants](orthopedic-instruments-implants.qmd) (3,152 items)
+- [Spinal Interbody Cages](spinal-interbody-cages.qmd) (2,898 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Polyaxial Cannulated Trial Plates')">
+  Ask about this category
+</button>

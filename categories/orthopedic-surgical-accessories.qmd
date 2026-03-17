@@ -1,0 +1,40 @@
+---
+title: "Orthopedic Surgical Accessories"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 2,996 items
+:::
+
+Orthopedic Surgical Accessories comprise a vast array of tools and devices that aid surgeons in stabilising bones, joints and soft tissues during operations. These items range from simple braces and plates to custom made compresses and components that provide precise support in the operating theatre. The collection includes about three thousand distinct products, each engineered to meet the exact demands of modern orthopaedic surgery.
+
+## Sample Products
+
+| Product |
+|---------|
+| GalaFLEX LITE - GalaFlex LITE Scaffold, 20.0 cm x 25.0 cm, Rectangle |
+| Clear Choice - Face Shields |
+| DEKNATEL - PLED SOFT 5/8X3/8X1/16 X6 |
+| Adsafe™ - ADSAFE Face Shield Plus,Adult, w/keychain,Black,Disp |
+| Premicron - PREMICRON GREEN 2/0 (3) 75CM DS35(M) DDP |
+
+## Related Categories
+
+**Most similar:**
+
+- [General Surgical Supplies](general-surgical-supplies.qmd)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd)
+
+**In the orthopedic group:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Orthopedic Surgical Accessories')">
+  Ask about this category
+</button>

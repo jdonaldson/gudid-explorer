@@ -1,0 +1,30 @@
+---
+title: "Medline Surgical Supplies"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **supplier brands** group &middot; 1,568 items
+:::
+
+Medline Surgical Supplies is a collection that includes a wide range of items used by medical and surgical teams, from everyday protective equipment to specialised kits designed for particular procedures. These items provide the tools necessary for examinations, treatments and surgeries, helping clinicians deliver safe and effective care. There are about one thousand six hundred different items in this group.
+
+## Sample Products
+
+| Product |
+|---------|
+| Medline Industries, Inc. - TOTAL KNEE KIT WRMC 33790 |
+| ACS - LUMBAR/BACK SET UP TRAY |
+| MEDLINE - TRAY,TRACHEOSTOMY,BASIC,4 GAUZE |
+| STRADIS HEALTHCARE - CUSTOM DENTAL KIT DENTAL SURGERY PACK |
+| MEDI - PROFILE WHOLE LEG OVRSLV MAG II |
+
+## Related Categories
+
+**In the supplier brands group:**
+
+- [Cardinal Health surgical packs](cardinal-health-surgical-packs.qmd) (833 items)
+- [Custom Perfusion Pack Sets](custom-perfusion-pack-sets.qmd) (223 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Medline Surgical Supplies')">
+  Ask about this category
+</button>

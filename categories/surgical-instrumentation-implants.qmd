@@ -1,0 +1,41 @@
+---
+title: "Surgical instrumentation & implants"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 3,050 items
+:::
+
+Surgical instrumentation & implants. These are the tools and devices that doctors use in the operating theatre to repair, replace or support body parts. There are about three thousand different items in this collection.
+
+## Sample Products
+
+| Product |
+|---------|
+| FENTEX - Rubber Bulb                             for 832600FX |
+| SonaStar - SonaStar FS 1000 RF Ultrasonic Surgical Aspiration System (Compatible for 110/22 |
+| Nucleus - FREEDOM COIL, BROWN (6CM / 2") |
+| LIFEPAK® 12 defibrillator/monitor - LP12AABCABAACBBBAABAAAAALP12 MONITOR-DEFIB |
+| micromed - fixed and/or ambulatory long-term EEG recorder, 32 EEG channels |
+
+## Related Categories
+
+**Most similar:**
+
+- [General Surgical Supplies](general-surgical-supplies.qmd)
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd)
+
+**In the orthopedic group:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Surgical instrumentation & implants')">
+  Ask about this category
+</button>

@@ -1,0 +1,40 @@
+---
+title: "Razek Surgical Instruments"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 3,417 items
+:::
+
+Razek Surgical Instruments is a collection of tools used by surgeons to perform a wide range of procedures, from delicate bone work to precision cutting. The assortment includes specialised needles, pliers and complex instrument systems that aid in surgeries and training. The group contains about three thousand four hundred items, offering a comprehensive catalogue for medical professionals.
+
+## Sample Products
+
+| Product |
+|---------|
+| Valeo Spacer System - Valeo II PL_OL Caddy Inserter Tips |
+| NA - Recon Lag Screw Drill |
+| NA - Silicon Mat 3 pieces |
+| Titan Modular Shoulder System 2.5 - TSS GLENOID FIVE FLUTE REAMER SZ. L |
+| DESCHAMPS LIGATURE CARRIER - DESCHAMPS LIGATURE CARRIER SMALL CURVED LEFT SHARP TIP |
+
+## Related Categories
+
+**Most similar:**
+
+- [Bone Drills & Screws](bone-drills-screws.qmd)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd)
+
+**In the orthopedic group:**
+
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Razek Surgical Instruments')">
+  Ask about this category
+</button>

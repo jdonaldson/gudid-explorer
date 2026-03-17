@@ -1,0 +1,30 @@
+---
+title: "Dental surgical implant tools"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **dental** group &middot; 3,927 items
+:::
+
+Dental surgical implant tools are the specialised instruments and supplies that dentists use to place artificial tooth roots into the jawbone. They include small surgical drills, bone graft materials, impression trays and various protective gloves. The collection contains about three thousand nine hundred items, offering a comprehensive range for every implant procedure.
+
+## Sample Products
+
+| Product |
+|---------|
+| Sklar® - PLASTIC FILLING INST DE #1 |
+| n/a - TRÄGER SFD myone |
+| NA - TRIBOS 501 Kunststoffzaehne LV1-UK-D4 |
+| Resin Teeth DCL PE - SR Vivodent DCL 6er OA44 C4 |
+| Resin Teeth  DCL  PE - SR Orthotyp A-D Set of 8 U N5U C1 |
+
+## Related Categories
+
+**In the dental group:**
+
+- [Orthodontic Bands & Wires](orthodontic-bands-wires.qmd) (2,334 items)
+- [Implant system accessories](implant-system-accessories.qmd) (1,644 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Dental surgical implant tools')">
+  Ask about this category
+</button>

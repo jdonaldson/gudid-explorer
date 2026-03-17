@@ -1,0 +1,29 @@
+---
+title: "Lower limb compression support"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **lower extremity + compression** group &middot; 1,077 items
+:::
+
+Lower limb compression support. These are a range of products designed to provide gentle pressure to the legs and feet, helping circulation, reducing swelling and supporting aches in the knees and ankles. There are about one thousand one hundred items in this group.
+
+## Sample Products
+
+| Product |
+|---------|
+| Juzo Custom Compression Garments - 34-46 mmHg, Strong, Silver, Panty, 1 Leg,Custom |
+| MEDI - JUXTAFIT BASIC LOWER LEG BLK 36CM MEDIUM |
+| MEDI - COMFORT ARM 20-30 LONG JAVA VIII |
+| MEDI - !SP30-40 COMF CLF PET NW BDTB OT SND VII |
+| JOBST Elvarex - E1/BB-WOE/BS-TC-WB/ZI |
+
+## Related Categories
+
+**In the lower extremity + compression group:**
+
+- [Ankle‑Foot Orthoses (AFO)](anklefoot-orthoses-afo.qmd) (473 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Lower limb compression support')">
+  Ask about this category
+</button>

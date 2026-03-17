@@ -1,0 +1,29 @@
+---
+title: "Ankle‑Foot Orthoses (AFO)"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **lower extremity + compression** group &middot; 473 items
+:::
+
+Ankle‑Foot Orthoses (AFO). These are supportive devices that are fitted to the ankle and foot to help manage pain, improve mobility and provide stability for people with a range of conditions, from arthritis to post‑injury recovery. The collection contains about five hundred different models, each designed to fit a specific need or body type.
+
+## Sample Products
+
+| Product |
+|---------|
+| Voyager - Voyager Foot, Left, Brown, Endo IP, 22cm, Category 3 |
+| Soleus - Soleus Foot, Right, Tan, Perfect Pink Housing, 27cm, Wide, Category 12 |
+| Soleus - Soleus Foot, Left, Caucasian, Perfect Pink Housing, 26cm, Narrow, Category 32 |
+| TruStep - Trustep Foot, Left, Jet Black, Endo IP, 24cm, Narrow, Category 2 |
+| Aviator - Aviator Foot, Endo IP, 29cm, Category 4 |
+
+## Related Categories
+
+**In the lower extremity + compression group:**
+
+- [Lower limb compression support](lower-limb-compression-support.qmd) (1,077 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Ankle‑Foot Orthoses (AFO)')">
+  Ask about this category
+</button>

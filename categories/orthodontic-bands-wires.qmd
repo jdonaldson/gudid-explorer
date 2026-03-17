@@ -1,0 +1,30 @@
+---
+title: "Orthodontic Bands & Wires"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **dental** group &middot; 2,334 items
+:::
+
+Orthodontic Bands & Wires. This collection consists of the tiny, often unseen components that secure braces and direct the alignment of teeth, such as plastic bands and wire accessories. It contains roughly two thousand three hundred items in all.
+
+## Sample Products
+
+| Product |
+|---------|
+| Elite® Med-Twin Brackets - Elite® Med-Twin .018 LR1/2 0T 0A 0O |
+| Empower2 - DB BKT SL EMPOWER INTERACT LR 2ND BIC 022 T-22 A=0 R=0 OFFSET PAD W/HK DIST |
+| E-Chain - Green            Mini |
+| RMO - A05523 D02303 MBT FLI SGL MX6 L22 -14T 10DO HK |
+| N.A. - Buccal tube McLaughlin Bennett 5.0 .022" on pad mand. 6 right T -20° / Rot 0° |
+
+## Related Categories
+
+**In the dental group:**
+
+- [Dental surgical implant tools](dental-surgical-implant-tools.qmd) (3,927 items)
+- [Implant system accessories](implant-system-accessories.qmd) (1,644 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Orthodontic Bands & Wires')">
+  Ask about this category
+</button>

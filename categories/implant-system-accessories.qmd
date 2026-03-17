@@ -1,0 +1,30 @@
+---
+title: "Implant system accessories"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **dental** group &middot; 1,644 items
+:::
+
+Implant system accessories are essential tools that complement the main dental implants, helping surgeons to prepare bone, secure the implant, and provide the necessary support during surgery. They include a wide range of items from drilling guides and bone expanders to irrigation sets and special surgical trays. The collection contains about one thousand six hundred unique items, reflecting the breadth of choices available to clinicians.
+
+## Sample Products
+
+| Product |
+|---------|
+| FRIADENT® - Multipack TransferCap 3 pcs. D5.5 |
+| FINAL CYLINDRICAL DRILL - FINAL CYLINDRICAL DRILL D.3.00 MM |
+| XiVE® - MP Abutment D3.4/GH5/A15 |
+| Straumann® BLC and TLC Implants - BLC Implant, Ø 3.75mm RB, SLActive® 8mm, Roxolid® |
+| LEONE SPA - MUA PLUS 2.2 ANG.7,5° GH1,5 |
+
+## Related Categories
+
+**In the dental group:**
+
+- [Dental surgical implant tools](dental-surgical-implant-tools.qmd) (3,927 items)
+- [Orthodontic Bands & Wires](orthodontic-bands-wires.qmd) (2,334 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Implant system accessories')">
+  Ask about this category
+</button>

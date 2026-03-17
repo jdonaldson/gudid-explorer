@@ -1,0 +1,51 @@
+---
+title: "Categories"
+---
+
+This dataset contains **50,000** items organized into **22** categories.
+
+### orthopedic
+*23,269 items total*
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Spine Surgical Instruments](spine-surgical-instruments.qmd) (2,557 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+### sizing + final product
+*13,143 items total*
+
+- [Polyaxial Cannulated Pedicle Screws](polyaxial-cannulated-pedicle-screws.qmd) (5,997 items)
+- [Orthopedic Instruments & Implants](orthopedic-instruments-implants.qmd) (3,152 items)
+- [Spinal Interbody Cages](spinal-interbody-cages.qmd) (2,898 items)
+- [Polyaxial Cannulated Trial Plates](polyaxial-cannulated-trial-plates.qmd) (1,096 items)
+
+### dental
+*7,905 items total*
+
+- [Dental surgical implant tools](dental-surgical-implant-tools.qmd) (3,927 items)
+- [Orthodontic Bands & Wires](orthodontic-bands-wires.qmd) (2,334 items)
+- [Implant system accessories](implant-system-accessories.qmd) (1,644 items)
+
+### supplier brands
+*2,624 items total*
+
+- [Medline Surgical Supplies](medline-surgical-supplies.qmd) (1,568 items)
+- [Cardinal Health surgical packs](cardinal-health-surgical-packs.qmd) (833 items)
+- [Custom Perfusion Pack Sets](custom-perfusion-pack-sets.qmd) (223 items)
+
+### lower extremity + compression
+*1,550 items total*
+
+- [Lower limb compression support](lower-limb-compression-support.qmd) (1,077 items)
+- [Ankle‑Foot Orthoses (AFO)](anklefoot-orthoses-afo.qmd) (473 items)
+
+### sensory/protective
+*1,509 items total*
+
+- [Hearing Aid & Ear Instruments](hearing-aid-ear-instruments.qmd) (1,109 items)
+- [Eye Protection & Accessories](eye-protection-accessories.qmd) (400 items)

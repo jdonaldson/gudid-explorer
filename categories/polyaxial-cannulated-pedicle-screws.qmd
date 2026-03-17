@@ -1,0 +1,31 @@
+---
+title: "Polyaxial Cannulated Pedicle Screws"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **sizing + final product** group &middot; 5,997 items
+:::
+
+Polyaxial Cannulated Pedicle Screws are specialised screws designed to anchor bone grafts and implants into the spine, allowing the screw to be placed at a slight angle to maximise stability while reducing the risk of damage to surrounding tissues. This collection contains roughly six thousand distinct items, each engineered to fit a range of clinical needs across spinal surgery.
+
+## Sample Products
+
+| Product |
+|---------|
+| MediRod Pedicle Screw System - ti pedicle screw 6x25mm yellow |
+| CD HORIZON® Spinal System - SCREW 55890008545 5.5/6.0 RMAS 8.5X45 |
+| Coral - Solid Polyaxial Screw, 5.50mm x 20mm |
+| CREO - CREO Preferred Angle Screw, 9.5-8.0x110mm, Cannulated, DOD, CoCr Head, Ti Shank |
+| Tandry Compression Screw System - 4.7mm Compression Cannulated Screw, 90mm |
+
+## Related Categories
+
+**In the sizing + final product group:**
+
+- [Orthopedic Instruments & Implants](orthopedic-instruments-implants.qmd) (3,152 items)
+- [Spinal Interbody Cages](spinal-interbody-cages.qmd) (2,898 items)
+- [Polyaxial Cannulated Trial Plates](polyaxial-cannulated-trial-plates.qmd) (1,096 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Polyaxial Cannulated Pedicle Screws')">
+  Ask about this category
+</button>

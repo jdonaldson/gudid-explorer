@@ -1,0 +1,40 @@
+---
+title: "Spine Surgical Instruments"
+---
+
+::: {.callout-note appearance="simple"}
+Part of the **orthopedic** group &middot; 2,557 items
+:::
+
+Spine Surgical Instruments. This group contains a wide range of specialised tools that surgeons use to perform delicate procedures on the spine, from cutting and shaping bone to holding tissue in place. The collection is quite extensive, with about two thousand six hundred items.
+
+## Sample Products
+
+| Product |
+|---------|
+| SurgyCut - SurgyCut Curved Blade with Suction & Electrode, 5mm/45cm |
+| Millennium - WYLIE RENAL VEIN RETRACTOR  WIDE  DEEP |
+| Novo Surgical Inc. - mueller-type femoral neck retractor, 13 1/2" (34.3 cm) |
+| Ambler Surgical - Jacobson endarterectomy spatula, 7'', straight, 1.0mm x 10.0mm blades, round han |
+| Thompson - Swivel Meyerding 51x125mm |
+
+## Related Categories
+
+**Most similar:**
+
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd)
+- [Bone Drills & Screws](bone-drills-screws.qmd)
+
+**In the orthopedic group:**
+
+- [Razek Surgical Instruments](razek-surgical-instruments.qmd) (3,417 items)
+- [Bone Drills & Screws](bone-drills-screws.qmd) (3,259 items)
+- [Surgical instrumentation & implants](surgical-instrumentation-implants.qmd) (3,050 items)
+- [Orthopedic Surgical Accessories](orthopedic-surgical-accessories.qmd) (2,996 items)
+- [Surgical instruments & consumables](surgical-instruments-consumables.qmd) (2,948 items)
+- [General Surgical Supplies](general-surgical-supplies.qmd) (2,931 items)
+- [Cannulated surgical instruments](cannulated-surgical-instruments.qmd) (2,111 items)
+
+<button class="btn btn-outline-primary btn-sm" onclick="askChat('Spine Surgical Instruments')">
+  Ask about this category
+</button>
