@@ -1,0 +1,863 @@
+{
+  "0": {
+    "name": "Eye Protection & Accessories",
+    "size": 400,
+    "slug": "eye-protection-accessories",
+    "description": "Eye Protection & Accessories. This section gathers all the gear you need to keep your eyes safe and comfortable, from safety goggles and protective glasses to contact lens cases and eye care accessories. It contains about four hundred different items.",
+    "bundle": {
+      "label": "sensory/protective",
+      "siblings": [
+        {
+          "id": "1",
+          "name": "Hearing Aid & Ear Instruments",
+          "size": 1109
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "BBIG - F20049335",
+      "Zac Posen - Florian Black Spectacle",
+      "read on - 3 mm eyewear, black, +2.5 dpt, not packaged",
+      "Islander Eyes - ISLANDER EYES 485 POLARIZED SUNGLASSES",
+      "EYEWEAR BY ROI ADA PINK/BLACK - 54-18-135  PINK/BLACK  WITTNAUER"
+    ]
+  },
+  "1": {
+    "name": "Hearing Aid & Ear Instruments",
+    "size": 1109,
+    "slug": "hearing-aid-ear-instruments",
+    "description": "Hearing Aid & Ear Instruments. This collection contains a wide range of medical devices used for hearing assistance and ear examination, including hearing aids, ear specula, thermometers and a variety of surgical tools. There are about one thousand one hundred items in this group.",
+    "bundle": {
+      "label": "sensory/protective",
+      "siblings": [
+        {
+          "id": "0",
+          "name": "Eye Protection & Accessories",
+          "size": 400
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "GN ReSound - HI,AGX2 L961-DRW,PRL WHT",
+      "Phonak - Phonak Aud\u00e9o V90-312T (velvet black)",
+      "Signia - Signia PURE C&G 7AX hearing aid / SLH",
+      "SIGNIA - HA INTUIS M 4.0 GPH",
+      "Sonic - CV40 MNR T, 2.4G NFM DG DEMO CAPTIVATE 40"
+    ]
+  },
+  "2": {
+    "name": "Dental surgical implant tools",
+    "size": 3927,
+    "slug": "dental-surgical-implant-tools",
+    "description": "Dental surgical implant tools are the specialised instruments and supplies that dentists use to place artificial tooth roots into the jawbone. They include small surgical drills, bone graft materials, impression trays and various protective gloves. The collection contains about three thousand nine hundred items, offering a comprehensive range for every implant procedure.",
+    "bundle": {
+      "label": "dental",
+      "siblings": [
+        {
+          "id": "6",
+          "name": "Orthodontic Bands & Wires",
+          "size": 2334
+        },
+        {
+          "id": "9",
+          "name": "Implant system accessories",
+          "size": 1644
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "Sklar\u00ae - PLASTIC FILLING INST DE #1",
+      "n/a - TR\u00c4GER SFD myone",
+      "NA - TRIBOS 501 Kunststoffzaehne LV1-UK-D4",
+      "Resin Teeth DCL PE - SR Vivodent DCL 6er OA44 C4",
+      "Resin Teeth  DCL  PE - SR Orthotyp A-D Set of 8 U N5U C1"
+    ]
+  },
+  "3": {
+    "name": "Surgical instrumentation & implants",
+    "size": 3050,
+    "slug": "surgical-instrumentation-implants",
+    "description": "Surgical instrumentation & implants. These are the tools and devices that doctors use in the operating theatre to repair, replace or support body parts. There are about three thousand different items in this collection.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    "similar": [
+      "4",
+      "11",
+      "21"
+    ],
+    "samples": [
+      "FENTEX - Rubber Bulb                             for 832600FX",
+      "SonaStar - SonaStar FS 1000 RF Ultrasonic Surgical Aspiration System (Compatible for 110/22",
+      "Nucleus - FREEDOM COIL, BROWN (6CM / 2\")",
+      "LIFEPAK\u00ae 12 defibrillator/monitor - LP12AABCABAACBBBAABAAAAALP12 MONITOR-DEFIB",
+      "micromed - fixed and/or ambulatory long-term EEG recorder, 32 EEG channels"
+    ]
+  },
+  "4": {
+    "name": "General Surgical Supplies",
+    "size": 2931,
+    "slug": "general-surgical-supplies",
+    "description": "General Surgical Supplies. This collection contains a wide range of everyday tools and materials that surgeons use to perform operations safely and efficiently, from simple tubes and sutures to specialised implants and diagnostic devices. It comprises about two thousand nine hundred distinct items.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    "similar": [
+      "3",
+      "17"
+    ],
+    "samples": [
+      "Tau MMab - Tau is a mouse monoclonal antibody derived from cell culture supernatant that is",
+      "Rymed - 7\u201d Microbore Extension Set with 1.2 Micron Filter",
+      "Bausch + Lomb - CANNULA LACRIMAL BAILEY",
+      "ARCHITECT - Quantia ASO",
+      "CTR2150CEUH - diagnostic x-ray tube housing assembly"
+    ]
+  },
+  "5": {
+    "name": "Custom Perfusion Pack Sets",
+    "size": 223,
+    "slug": "custom-perfusion-pack-sets",
+    "description": "Custom Perfusion Pack Sets. This collection comprises ready to use kits that combine pumps, cannulae, filters and other components for safe and efficient blood flow during medical procedures. There are about two hundred distinct sets in this group.",
+    "bundle": {
+      "label": "supplier brands",
+      "siblings": [
+        {
+          "id": "18",
+          "name": "Medline Surgical Supplies",
+          "size": 1568
+        },
+        {
+          "id": "12",
+          "name": "Cardinal Health surgical packs",
+          "size": 833
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "NA - CUSTOM PACK CB8T45R1 1/4 PACK",
+      "NA - CUSTOM PACK BB11T95R6 BAPTIST ACC",
+      "NA - CUSTOM PACK 8E61R1 5PK 3/8 O2 EXC",
+      "Intersept\u00ae - CONN CB4630 INTERSEPT 1/4 X 1/4 LL 10PK",
+      "NA - CUSTOM PACK BB4M03R3 2PK 3/8 VEN"
+    ]
+  },
+  "6": {
+    "name": "Orthodontic Bands & Wires",
+    "size": 2334,
+    "slug": "orthodontic-bands-wires",
+    "description": "Orthodontic Bands & Wires. This collection consists of the tiny, often unseen components that secure braces and direct the alignment of teeth, such as plastic bands and wire accessories. It contains roughly two thousand three hundred items in all.",
+    "bundle": {
+      "label": "dental",
+      "siblings": [
+        {
+          "id": "2",
+          "name": "Dental surgical implant tools",
+          "size": 3927
+        },
+        {
+          "id": "9",
+          "name": "Implant system accessories",
+          "size": 1644
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "Elite\u00ae Med-Twin Brackets - Elite\u00ae Med-Twin .018 LR1/2 0T 0A 0O",
+      "Empower2 - DB BKT SL EMPOWER INTERACT LR 2ND BIC 022 T-22 A=0 R=0 OFFSET PAD W/HK DIST",
+      "E-Chain - Green            Mini",
+      "RMO - A05523 D02303 MBT FLI SGL MX6 L22 -14T 10DO HK",
+      "N.A. - Buccal tube McLaughlin Bennett 5.0 .022\" on pad mand. 6 right T -20\u00b0 / Rot 0\u00b0"
+    ]
+  },
+  "7": {
+    "name": "Bone Drills & Screws",
+    "size": 3259,
+    "slug": "bone-drills-screws",
+    "description": "Bone Drills & Screws. This group contains surgical instruments and hardware used in bone cutting and fixation, from burrs to rings and screws that support bone and joint procedures. The collection holds about three thousand three hundred distinct items.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    "similar": [
+      "11",
+      "10"
+    ],
+    "samples": [
+      "TriLeap Lower Extremity Anatomic Plating System - 22MM Cannulated Cone Reamer",
+      "EXPert Nail - 10MM TI CANNULATED TIBIAL NAIL-EX/255MM-STERILE",
+      "NORDENT MANUFACTURING INC - CURETTE, DOUBLE END, GRACEY #11-12 FINE, DURALITE ROUND HANDLE",
+      "General Instruments - ALIF Cup Curette Straight, Size 06",
+      "TRIGEN - FEMORAL ANTEGRADE NAIL LIME 13MM X                                    46CM LEFT "
+    ]
+  },
+  "8": {
+    "name": "Lower limb compression support",
+    "size": 1077,
+    "slug": "lower-limb-compression-support",
+    "description": "Lower limb compression support. These are a range of products designed to provide gentle pressure to the legs and feet, helping circulation, reducing swelling and supporting aches in the knees and ankles. There are about one thousand one hundred items in this group.",
+    "bundle": {
+      "label": "lower extremity + compression",
+      "siblings": [
+        {
+          "id": "19",
+          "name": "Ankle\u2011Foot Orthoses (AFO)",
+          "size": 473
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "Juzo Custom Compression Garments - 34-46 mmHg, Strong, Silver, Panty, 1 Leg,Custom",
+      "MEDI - JUXTAFIT BASIC LOWER LEG BLK 36CM MEDIUM",
+      "MEDI - COMFORT ARM 20-30 LONG JAVA VIII",
+      "MEDI - !SP30-40 COMF CLF PET NW BDTB OT SND VII",
+      "JOBST Elvarex - E1/BB-WOE/BS-TC-WB/ZI"
+    ]
+  },
+  "9": {
+    "name": "Implant system accessories",
+    "size": 1644,
+    "slug": "implant-system-accessories",
+    "description": "Implant system accessories are essential tools that complement the main dental implants, helping surgeons to prepare bone, secure the implant, and provide the necessary support during surgery. They include a wide range of items from drilling guides and bone expanders to irrigation sets and special surgical trays. The collection contains about one thousand six hundred unique items, reflecting the breadth of choices available to clinicians.",
+    "bundle": {
+      "label": "dental",
+      "siblings": [
+        {
+          "id": "2",
+          "name": "Dental surgical implant tools",
+          "size": 3927
+        },
+        {
+          "id": "6",
+          "name": "Orthodontic Bands & Wires",
+          "size": 2334
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "FRIADENT\u00ae - Multipack TransferCap 3 pcs. D5.5",
+      "FINAL CYLINDRICAL DRILL - FINAL CYLINDRICAL DRILL D.3.00 MM",
+      "XiVE\u00ae - MP Abutment D3.4/GH5/A15",
+      "Straumann\u00ae BLC and TLC Implants - BLC Implant, \u00d8 3.75mm RB, SLActive\u00ae 8mm, Roxolid\u00ae",
+      "LEONE SPA - MUA PLUS 2.2 ANG.7,5\u00b0 GH1,5"
+    ]
+  },
+  "10": {
+    "name": "Spine Surgical Instruments",
+    "size": 2557,
+    "slug": "spine-surgical-instruments",
+    "description": "Spine Surgical Instruments. This group contains a wide range of specialised tools that surgeons use to perform delicate procedures on the spine, from cutting and shaping bone to holding tissue in place. The collection is quite extensive, with about two thousand six hundred items.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    "similar": [
+      "16",
+      "7"
+    ],
+    "samples": [
+      "SurgyCut - SurgyCut Curved Blade with Suction & Electrode, 5mm/45cm",
+      "Millennium - WYLIE RENAL VEIN RETRACTOR  WIDE  DEEP",
+      "Novo Surgical Inc. - mueller-type femoral neck retractor, 13 1/2\" (34.3 cm)",
+      "Ambler Surgical - Jacobson endarterectomy spatula, 7'', straight, 1.0mm x 10.0mm blades, round han",
+      "Thompson - Swivel Meyerding 51x125mm"
+    ]
+  },
+  "11": {
+    "name": "Razek Surgical Instruments",
+    "size": 3417,
+    "slug": "razek-surgical-instruments",
+    "description": "Razek Surgical Instruments is a collection of tools used by surgeons to perform a wide range of procedures, from delicate bone work to precision cutting. The assortment includes specialised needles, pliers and complex instrument systems that aid in surgeries and training. The group contains about three thousand four hundred items, offering a comprehensive catalogue for medical professionals.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    "similar": [
+      "7",
+      "3"
+    ],
+    "samples": [
+      "Valeo Spacer System - Valeo II PL_OL Caddy Inserter Tips",
+      "NA - Recon Lag Screw Drill",
+      "NA - Silicon Mat 3 pieces",
+      "Titan Modular Shoulder System 2.5 - TSS GLENOID FIVE FLUTE REAMER SZ. L",
+      "DESCHAMPS LIGATURE CARRIER - DESCHAMPS LIGATURE CARRIER SMALL CURVED LEFT SHARP TIP"
+    ]
+  },
+  "12": {
+    "name": "Cardinal Health surgical packs",
+    "size": 833,
+    "slug": "cardinal-health-surgical-packs",
+    "description": "Cardinal Health surgical packs. These are ready to use kits and supplies that doctors and nurses can pull straight from the shelf when they need to perform surgeries or treat patients. There are about eight hundred different items in this collection.",
+    "bundle": {
+      "label": "supplier brands",
+      "siblings": [
+        {
+          "id": "18",
+          "name": "Medline Surgical Supplies",
+          "size": 1568
+        },
+        {
+          "id": "5",
+          "name": "Custom Perfusion Pack Sets",
+          "size": 223
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "CARDINAL HEALTH - STERILE BIOPSY RADIOLOGY PACK",
+      "CARDINAL HEALTH - CENT LN W TGADRM CHG W DRAPE",
+      "CARDINAL HEALTH - STR 212330 GYNE ABDOMINAL PACK",
+      "CARDINAL HEALTH - NON-ADHERENT PADS 3X8IN STERILE, LF",
+      "CARDINAL HEALTH - HC TURP PK CONCEPTION"
+    ]
+  },
+  "13": {
+    "name": "Orthopedic Instruments & Implants",
+    "size": 3152,
+    "slug": "orthopedic-instruments-implants",
+    "description": "Orthopedic Instruments & Implants is a collection of tools and devices that surgeons use to diagnose, treat and support bone and joint conditions. The items range from specialised plates and drills to ergonomic supports that help doctors perform procedures with precision and care. There are about three thousand two hundred items in this group, offering a comprehensive array of options for a wide variety of medical needs.",
+    "bundle": {
+      "label": "sizing + final product",
+      "siblings": [
+        {
+          "id": "15",
+          "name": "Polyaxial Cannulated Pedicle Screws",
+          "size": 5997
+        },
+        {
+          "id": "20",
+          "name": "Spinal Interbody Cages",
+          "size": 2898
+        },
+        {
+          "id": "14",
+          "name": "Polyaxial Cannulated Trial Plates",
+          "size": 1096
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "R3 - LINER IMPACTOR - 32MM",
+      "CHESAPEAKE\u00ae Stabilization System - Rasp, Size 13x18x5 mm",
+      "APEX 3D Total Ankle Replacement System - Tibia, Arc, Left, Size 2, Long, 3DP",
+      "PRECISE OFFSET PARTIAL - PRECISE OFFSET PARTIAL 2.25MM LENGTH TITANIUM",
+      "Columbus\u00ae REVISION F - COLUMBUS REV F FEMUR CEMENTED F3L"
+    ]
+  },
+  "14": {
+    "name": "Polyaxial Cannulated Trial Plates",
+    "size": 1096,
+    "slug": "polyaxial-cannulated-trial-plates",
+    "description": "Polyaxial Cannulated Trial Plates. These are a range of surgical instruments used in spine operations to test and position implants before they are permanently fixed, allowing surgeons to adjust angles and confirm fit with great precision. There are about one thousand one hundred items in this collection.",
+    "bundle": {
+      "label": "sizing + final product",
+      "siblings": [
+        {
+          "id": "15",
+          "name": "Polyaxial Cannulated Pedicle Screws",
+          "size": 5997
+        },
+        {
+          "id": "13",
+          "name": "Orthopedic Instruments & Implants",
+          "size": 3152
+        },
+        {
+          "id": "20",
+          "name": "Spinal Interbody Cages",
+          "size": 2898
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "VA-LCP - 2.4MM TI VA-LCP 2-CLMN VLR DST RADIUS PL 6H HD/2H SHAFT/RT",
+      "TC-100 - ADULT BLD PL 130 DEG 9H 70MM BLD                                    LGTH 152MM S",
+      "N/A - PULP * Rt/4H",
+      "Peri-Loc - SHORT LATERAL DISTAL FEMUR                                    TARGETER RIGHT FOR",
+      "P.A.C.E. - P.A.C.E. MTP Fusion Revision Plate, 2,5/2,8mm System, Right"
+    ]
+  },
+  "15": {
+    "name": "Polyaxial Cannulated Pedicle Screws",
+    "size": 5997,
+    "slug": "polyaxial-cannulated-pedicle-screws",
+    "description": "Polyaxial Cannulated Pedicle Screws are specialised screws designed to anchor bone grafts and implants into the spine, allowing the screw to be placed at a slight angle to maximise stability while reducing the risk of damage to surrounding tissues. This collection contains roughly six thousand distinct items, each engineered to fit a range of clinical needs across spinal surgery.",
+    "bundle": {
+      "label": "sizing + final product",
+      "siblings": [
+        {
+          "id": "13",
+          "name": "Orthopedic Instruments & Implants",
+          "size": 3152
+        },
+        {
+          "id": "20",
+          "name": "Spinal Interbody Cages",
+          "size": 2898
+        },
+        {
+          "id": "14",
+          "name": "Polyaxial Cannulated Trial Plates",
+          "size": 1096
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "MediRod Pedicle Screw System - ti pedicle screw 6x25mm yellow",
+      "CD HORIZON\u00ae Spinal System - SCREW 55890008545 5.5/6.0 RMAS 8.5X45",
+      "Coral - Solid Polyaxial Screw, 5.50mm x 20mm",
+      "CREO - CREO Preferred Angle Screw, 9.5-8.0x110mm, Cannulated, DOD, CoCr Head, Ti Shank",
+      "Tandry Compression Screw System - 4.7mm Compression Cannulated Screw, 90mm"
+    ]
+  },
+  "16": {
+    "name": "Surgical instruments & consumables",
+    "size": 2948,
+    "slug": "surgical-instruments-consumables",
+    "description": "Surgical instruments & consumables are the tools and disposables that surgeons use during operations. These items range from delicate scissors and forceps to specialised devices and sterile gloves, all designed to support the precise and safe execution of medical procedures. There are about two thousand nine hundred different items in this collection, offering a vast range of options for the operating theatre.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    "similar": [
+      "10"
+    ],
+    "samples": [
+      "Speedlock - Johan Grasping Forceps, 5mm, 22mm Slightly Flat Jaws with Ratchet Handle: 8510-0",
+      "MicroFrance\u00ae - MicroFrance\u00ae Gayet bipolar forceps, fenestrated jaws, 3.5 mm diameter, 330 mm le",
+      "Raina Medical Devices - STERILE Non-Stick Bipolar Forceps Bayonet - 11\" (28 cm), 1.5 mm Tip",
+      "BOSS Instruments - Biopsy Fcps, Oval, Monopolar, 5mm, 45cm, Flushable",
+      "Reicodent - EXTRACT 1100 - Extracting forceps # 74NBiscuspids"
+    ]
+  },
+  "17": {
+    "name": "Orthopedic Surgical Accessories",
+    "size": 2996,
+    "slug": "orthopedic-surgical-accessories",
+    "description": "Orthopedic Surgical Accessories comprise a vast array of tools and devices that aid surgeons in stabilising bones, joints and soft tissues during operations. These items range from simple braces and plates to custom made compresses and components that provide precise support in the operating theatre. The collection includes about three thousand distinct products, each engineered to meet the exact demands of modern orthopaedic surgery.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    "similar": [
+      "4",
+      "3"
+    ],
+    "samples": [
+      "GalaFLEX LITE - GalaFlex LITE Scaffold, 20.0 cm x 25.0 cm, Rectangle",
+      "Clear Choice - Face Shields",
+      "DEKNATEL - PLED SOFT 5/8X3/8X1/16 X6",
+      "Adsafe\u2122 - ADSAFE Face Shield Plus,Adult, w/keychain,Black,Disp",
+      "Premicron - PREMICRON GREEN 2/0 (3) 75CM DS35(M) DDP"
+    ]
+  },
+  "18": {
+    "name": "Medline Surgical Supplies",
+    "size": 1568,
+    "slug": "medline-surgical-supplies",
+    "description": "Medline Surgical Supplies is a collection that includes a wide range of items used by medical and surgical teams, from everyday protective equipment to specialised kits designed for particular procedures. These items provide the tools necessary for examinations, treatments and surgeries, helping clinicians deliver safe and effective care. There are about one thousand six hundred different items in this group.",
+    "bundle": {
+      "label": "supplier brands",
+      "siblings": [
+        {
+          "id": "12",
+          "name": "Cardinal Health surgical packs",
+          "size": 833
+        },
+        {
+          "id": "5",
+          "name": "Custom Perfusion Pack Sets",
+          "size": 223
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "Medline Industries, Inc. - TOTAL KNEE KIT WRMC 33790",
+      "ACS - LUMBAR/BACK SET UP TRAY",
+      "MEDLINE - TRAY,TRACHEOSTOMY,BASIC,4 GAUZE",
+      "STRADIS HEALTHCARE - CUSTOM DENTAL KIT DENTAL SURGERY PACK",
+      "MEDI - PROFILE WHOLE LEG OVRSLV MAG II"
+    ]
+  },
+  "19": {
+    "name": "Ankle\u2011Foot Orthoses (AFO)",
+    "size": 473,
+    "slug": "anklefoot-orthoses-afo",
+    "description": "Ankle\u2011Foot Orthoses (AFO). These are supportive devices that are fitted to the ankle and foot to help manage pain, improve mobility and provide stability for people with a range of conditions, from arthritis to post\u2011injury recovery. The collection contains about five hundred different models, each designed to fit a specific need or body type.",
+    "bundle": {
+      "label": "lower extremity + compression",
+      "siblings": [
+        {
+          "id": "8",
+          "name": "Lower limb compression support",
+          "size": 1077
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "Voyager - Voyager Foot, Left, Brown, Endo IP, 22cm, Category 3",
+      "Soleus - Soleus Foot, Right, Tan, Perfect Pink Housing, 27cm, Wide, Category 12",
+      "Soleus - Soleus Foot, Left, Caucasian, Perfect Pink Housing, 26cm, Narrow, Category 32",
+      "TruStep - Trustep Foot, Left, Jet Black, Endo IP, 24cm, Narrow, Category 2",
+      "Aviator - Aviator Foot, Endo IP, 29cm, Category 4"
+    ]
+  },
+  "20": {
+    "name": "Spinal Interbody Cages",
+    "size": 2898,
+    "slug": "spinal-interbody-cages",
+    "description": "Spinal Interbody Cages. These are the devices that surgeons use to bridge gaps in the spinal column, providing support and stability during recovery. The collection contains about two thousand nine hundred different variations, each designed to fit a particular patient need.",
+    "bundle": {
+      "label": "sizing + final product",
+      "siblings": [
+        {
+          "id": "15",
+          "name": "Polyaxial Cannulated Pedicle Screws",
+          "size": 5997
+        },
+        {
+          "id": "13",
+          "name": "Orthopedic Instruments & Implants",
+          "size": 3152
+        },
+        {
+          "id": "14",
+          "name": "Polyaxial Cannulated Trial Plates",
+          "size": 1096
+        }
+      ]
+    },
+    "similar": [],
+    "samples": [
+      "IVA Cage Ti - Posterior Lumbar Interbody Fusion Titanium CageL30 x W10 x H12 x A0",
+      "Aurora Spine - VOX Lumbar Interbody Fusion System, 40mm x 22mm x 8 degrees x 17mm, UNCOATED",
+      "Plateau V & Z - Plateau-V Undersized Trial 28mm x 10mm, Modified Hudson",
+      "Zavation - Ti3Z CIF 14mmx16mmx12mm -0 deg",
+      "TiWAVE C Cervical Cage System - Cervical rasp, flat, 19mm x 14mm, 10mm, 7 degree, tapered"
+    ]
+  },
+  "21": {
+    "name": "Cannulated surgical instruments",
+    "size": 2111,
+    "slug": "cannulated-surgical-instruments",
+    "description": "Cannulated surgical instruments are specialised tools that allow surgeons to thread them through body cavities, creating a clear pathway for other devices. They include a range of flexible tubes, stents and catheters used in many areas from urology to orthopaedics. This collection contains roughly about two thousand one hundred distinct items.",
+    "bundle": {
+      "label": "orthopedic",
+      "siblings": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        }
+      ]
+    },
+    "similar": [
+      "3"
+    ],
+    "samples": [
+      "Adelante SafeSheath Ultra Lite - Peel-Away Introducer with Hemostatic Valve, 11F",
+      "Pacific\u2122 Plus - CATH PCP040080090 PCP D4.00 L 80 UL 900",
+      "SUB-Q - 36\" Single SUB-Q set, 6mm needle and 27-gauge w/Dressing, Box of 10",
+      "LoFric\u00ae Primo\u2122 - Single Use Urinary Catheter LoFric Primo Nelaton 8\" 08FR Paediatric",
+      "Anodyne Surgical - Anterior Chamber Cannula 27g X 3mm bend"
+    ]
+  }
+}

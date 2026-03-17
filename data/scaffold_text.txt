@@ -1,0 +1,84 @@
+50,000 items, 22 communities
+
+Largest: [15] Polyaxial Cannulated Pedicle Screws (5,997)
+Smallest: [5] Custom Perfusion Pack Sets (223)
+
+Communities (largest first):
+  [15] Polyaxial Cannulated Pedicle Screws (5,997)
+  [2] Dental surgical implant tools (3,927)
+  [11] Razek Surgical Instruments (3,417)
+  [7] Bone Drills & Screws (3,259)
+  [13] Orthopedic Instruments & Implants (3,152)
+  [3] Surgical instrumentation & implants (3,050)
+  [17] Orthopedic Surgical Accessories (2,996)
+  [16] Surgical instruments & consumables (2,948)
+  [4] General Surgical Supplies (2,931)
+  [20] Spinal Interbody Cages (2,898)
+  [10] Spine Surgical Instruments (2,557)
+  [6] Orthodontic Bands & Wires (2,334)
+  [21] Cannulated surgical instruments (2,111)
+  [9] Implant system accessories (1,644)
+  [18] Medline Surgical Supplies (1,568)
+  [1] Hearing Aid & Ear Instruments (1,109)
+  [14] Polyaxial Cannulated Trial Plates (1,096)
+  [8] Lower limb compression support (1,077)
+  [12] Cardinal Health surgical packs (833)
+  [19] Ankle‑Foot Orthoses (AFO) (473)
+  [0] Eye Protection & Accessories (400)
+  [5] Custom Perfusion Pack Sets (223)
+
+Groups:
+  [3], [4] — general surgical
+  [7], [11] — orthopedic (supplier)
+  [10], [16] — spine
+  [17], [3], [4] — orthopedic
+  [21], [17], [3], [4] — orthopedic
+  [7], [11], [10], [16] — orthopedic (supplier)
+  [2], [9] — dental
+  [14], [15] — sizing + final product
+  [13], [20] — orthopedic + spine
+  [6], [2], [9] — dental
+  [12], [18] — supplier brands
+  [14], [15], [13], [20] — sizing + final product
+  [8], [19] — lower extremity + compression
+  [0], [1] — sensory/protective
+  [5], [12], [18] — supplier brands
+
+Most similar:
+  [3] Surgical instrumentation & implants <-> [4] General Surgical Supplies (0.97)
+  [7] Bone Drills & Screws <-> [11] Razek Surgical Instruments (0.97)
+  [3] Surgical instrumentation & implants <-> [11] Razek Surgical Instruments (0.96)
+  [4] General Surgical Supplies <-> [17] Orthopedic Surgical Accessories (0.96)
+  [10] Spine Surgical Instruments <-> [16] Surgical instruments & consumables (0.96)
+  [3] Surgical instrumentation & implants <-> [21] Cannulated surgical instruments (0.96)
+
+Most distinct:
+  [5] Custom Perfusion Pack Sets (avg sim 0.80)
+  [19] Ankle‑Foot Orthoses (AFO) (avg sim 0.83)
+  [12] Cardinal Health surgical packs (avg sim 0.83)
+
+Use-case bundles (pre-built recommendations):
+  orthopedic: [11], [7], [3], [17], [16], [4], [10], [21] (23,269 items total)
+  sizing + final product: [15], [13], [20], [14] (13,143 items total)
+  dental: [2], [6], [9] (7,905 items total)
+  supplier brands: [18], [12], [5] (2,624 items total)
+  lower extremity + compression: [8], [19] (1,550 items total)
+  sensory/protective: [1], [0] (1,509 items total)
+
+Structural analogies (pairs that play similar roles):
+  [3], [4] (general surgical) ~ [7], [11] (orthopedic (supplier))
+  [3], [4] (general surgical) ~ [10], [16] (spine)
+  [7], [11] (orthopedic (supplier)) ~ [10], [16] (spine)
+  [10], [16] (spine) ~ [2], [9] (dental)
+  [2], [9] (dental) ~ [14], [15] (sizing + final product)
+
+Descriptions:
+  [15]: Polyaxial Cannulated Pedicle Screws are specialised screws designed to anchor bone grafts and implants into the spine, a
+  [2]: Dental surgical implant tools are the specialised instruments and supplies that dentists use to place artificial tooth r
+  [11]: Razek Surgical Instruments is a collection of tools used by surgeons to perform a wide range of procedures, from delicat
+  [13]: Orthopedic Instruments & Implants is a collection of tools and devices that surgeons use to diagnose, treat and support 
+  [17]: Orthopedic Surgical Accessories comprise a vast array of tools and devices that aid surgeons in stabilising bones, joint
+  [16]: Surgical instruments & consumables are the tools and disposables that surgeons use during operations.
+  [21]: Cannulated surgical instruments are specialised tools that allow surgeons to thread them through body cavities, creating
+  [9]: Implant system accessories are essential tools that complement the main dental implants, helping surgeons to prepare bon
+  [18]: Medline Surgical Supplies is a collection that includes a wide range of items used by medical and surgical teams, from e

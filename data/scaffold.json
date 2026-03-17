@@ -1,0 +1,658 @@
+{
+  "n_items": 50000,
+  "n_communities": 22,
+  "communities": {
+    "0": {
+      "name": "Eye Protection & Accessories",
+      "size": 400
+    },
+    "1": {
+      "name": "Hearing Aid & Ear Instruments",
+      "size": 1109
+    },
+    "2": {
+      "name": "Dental surgical implant tools",
+      "size": 3927
+    },
+    "3": {
+      "name": "Surgical instrumentation & implants",
+      "size": 3050
+    },
+    "4": {
+      "name": "General Surgical Supplies",
+      "size": 2931
+    },
+    "5": {
+      "name": "Custom Perfusion Pack Sets",
+      "size": 223
+    },
+    "6": {
+      "name": "Orthodontic Bands & Wires",
+      "size": 2334
+    },
+    "7": {
+      "name": "Bone Drills & Screws",
+      "size": 3259
+    },
+    "8": {
+      "name": "Lower limb compression support",
+      "size": 1077
+    },
+    "9": {
+      "name": "Implant system accessories",
+      "size": 1644
+    },
+    "10": {
+      "name": "Spine Surgical Instruments",
+      "size": 2557
+    },
+    "11": {
+      "name": "Razek Surgical Instruments",
+      "size": 3417
+    },
+    "12": {
+      "name": "Cardinal Health surgical packs",
+      "size": 833
+    },
+    "13": {
+      "name": "Orthopedic Instruments & Implants",
+      "size": 3152
+    },
+    "14": {
+      "name": "Polyaxial Cannulated Trial Plates",
+      "size": 1096
+    },
+    "15": {
+      "name": "Polyaxial Cannulated Pedicle Screws",
+      "size": 5997
+    },
+    "16": {
+      "name": "Surgical instruments & consumables",
+      "size": 2948
+    },
+    "17": {
+      "name": "Orthopedic Surgical Accessories",
+      "size": 2996
+    },
+    "18": {
+      "name": "Medline Surgical Supplies",
+      "size": 1568
+    },
+    "19": {
+      "name": "Ankle\u2011Foot Orthoses (AFO)",
+      "size": 473
+    },
+    "20": {
+      "name": "Spinal Interbody Cages",
+      "size": 2898
+    },
+    "21": {
+      "name": "Cannulated surgical instruments",
+      "size": 2111
+    }
+  },
+  "size_ranking": [
+    "15",
+    "2",
+    "11",
+    "7",
+    "13",
+    "3",
+    "17",
+    "16",
+    "4",
+    "20",
+    "10",
+    "6",
+    "21",
+    "9",
+    "18",
+    "1",
+    "14",
+    "8",
+    "12",
+    "19",
+    "0",
+    "5"
+  ],
+  "largest": "15",
+  "smallest": "5",
+  "groups": [
+    {
+      "members": [
+        "3",
+        "4"
+      ],
+      "label": "general surgical"
+    },
+    {
+      "members": [
+        "7",
+        "11"
+      ],
+      "label": "orthopedic (supplier)"
+    },
+    {
+      "members": [
+        "10",
+        "16"
+      ],
+      "label": "spine"
+    },
+    {
+      "members": [
+        "17",
+        "3",
+        "4"
+      ],
+      "label": "orthopedic"
+    },
+    {
+      "members": [
+        "21",
+        "17",
+        "3",
+        "4"
+      ],
+      "label": "orthopedic"
+    },
+    {
+      "members": [
+        "7",
+        "11",
+        "10",
+        "16"
+      ],
+      "label": "orthopedic (supplier)"
+    },
+    {
+      "members": [
+        "2",
+        "9"
+      ],
+      "label": "dental"
+    },
+    {
+      "members": [
+        "14",
+        "15"
+      ],
+      "label": "sizing + final product"
+    },
+    {
+      "members": [
+        "13",
+        "20"
+      ],
+      "label": "orthopedic + spine"
+    },
+    {
+      "members": [
+        "6",
+        "2",
+        "9"
+      ],
+      "label": "dental"
+    },
+    {
+      "members": [
+        "12",
+        "18"
+      ],
+      "label": "supplier brands"
+    },
+    {
+      "members": [
+        "14",
+        "15",
+        "13",
+        "20"
+      ],
+      "label": "sizing + final product"
+    },
+    {
+      "members": [
+        "8",
+        "19"
+      ],
+      "label": "lower extremity + compression"
+    },
+    {
+      "members": [
+        "0",
+        "1"
+      ],
+      "label": "sensory/protective"
+    },
+    {
+      "members": [
+        "5",
+        "12",
+        "18"
+      ],
+      "label": "supplier brands"
+    }
+  ],
+  "similarity": {
+    "top_pairs": [
+      {
+        "a": "3",
+        "b": "4",
+        "sim": 0.97
+      },
+      {
+        "a": "7",
+        "b": "11",
+        "sim": 0.966
+      },
+      {
+        "a": "3",
+        "b": "11",
+        "sim": 0.962
+      },
+      {
+        "a": "4",
+        "b": "17",
+        "sim": 0.961
+      },
+      {
+        "a": "10",
+        "b": "16",
+        "sim": 0.961
+      },
+      {
+        "a": "3",
+        "b": "21",
+        "sim": 0.959
+      },
+      {
+        "a": "7",
+        "b": "10",
+        "sim": 0.959
+      },
+      {
+        "a": "3",
+        "b": "17",
+        "sim": 0.958
+      }
+    ],
+    "bottom_pairs": [
+      {
+        "a": "0",
+        "b": "5",
+        "sim": 0.748
+      },
+      {
+        "a": "12",
+        "b": "19",
+        "sim": 0.746
+      },
+      {
+        "a": "5",
+        "b": "19",
+        "sim": 0.72
+      }
+    ],
+    "avg_similarity": {
+      "0": 0.839,
+      "1": 0.851,
+      "2": 0.898,
+      "3": 0.917,
+      "4": 0.908,
+      "5": 0.799,
+      "6": 0.88,
+      "7": 0.919,
+      "8": 0.855,
+      "9": 0.891,
+      "10": 0.892,
+      "11": 0.915,
+      "12": 0.83,
+      "13": 0.909,
+      "14": 0.88,
+      "15": 0.877,
+      "16": 0.899,
+      "17": 0.918,
+      "18": 0.87,
+      "19": 0.826,
+      "20": 0.869,
+      "21": 0.907
+    },
+    "most_distinct": [
+      "5",
+      "19",
+      "12"
+    ],
+    "most_central": [
+      "3",
+      "17",
+      "7"
+    ]
+  },
+  "analogies": [
+    {
+      "pair_a": [
+        "3",
+        "4"
+      ],
+      "pair_b": [
+        "7",
+        "11"
+      ],
+      "label_a": "general surgical",
+      "label_b": "orthopedic (supplier)",
+      "distance_a": 0.246,
+      "distance_b": 0.26
+    },
+    {
+      "pair_a": [
+        "3",
+        "4"
+      ],
+      "pair_b": [
+        "10",
+        "16"
+      ],
+      "label_a": "general surgical",
+      "label_b": "spine",
+      "distance_a": 0.246,
+      "distance_b": 0.28
+    },
+    {
+      "pair_a": [
+        "7",
+        "11"
+      ],
+      "pair_b": [
+        "10",
+        "16"
+      ],
+      "label_a": "orthopedic (supplier)",
+      "label_b": "spine",
+      "distance_a": 0.26,
+      "distance_b": 0.28
+    },
+    {
+      "pair_a": [
+        "10",
+        "16"
+      ],
+      "pair_b": [
+        "2",
+        "9"
+      ],
+      "label_a": "spine",
+      "label_b": "dental",
+      "distance_a": 0.28,
+      "distance_b": 0.334
+    },
+    {
+      "pair_a": [
+        "2",
+        "9"
+      ],
+      "pair_b": [
+        "14",
+        "15"
+      ],
+      "label_a": "dental",
+      "label_b": "sizing + final product",
+      "distance_a": 0.334,
+      "distance_b": 0.351
+    },
+    {
+      "pair_a": [
+        "14",
+        "15"
+      ],
+      "pair_b": [
+        "13",
+        "20"
+      ],
+      "label_a": "sizing + final product",
+      "label_b": "orthopedic + spine",
+      "distance_a": 0.351,
+      "distance_b": 0.395
+    },
+    {
+      "pair_a": [
+        "14",
+        "15"
+      ],
+      "pair_b": [
+        "12",
+        "18"
+      ],
+      "label_a": "sizing + final product",
+      "label_b": "supplier brands",
+      "distance_a": 0.351,
+      "distance_b": 0.409
+    },
+    {
+      "pair_a": [
+        "13",
+        "20"
+      ],
+      "pair_b": [
+        "12",
+        "18"
+      ],
+      "label_a": "orthopedic + spine",
+      "label_b": "supplier brands",
+      "distance_a": 0.395,
+      "distance_b": 0.409
+    },
+    {
+      "pair_a": [
+        "8",
+        "19"
+      ],
+      "pair_b": [
+        "0",
+        "1"
+      ],
+      "label_a": "lower extremity + compression",
+      "label_b": "sensory/protective",
+      "distance_a": 0.509,
+      "distance_b": 0.561
+    }
+  ],
+  "bundles": [
+    {
+      "members": [
+        "21",
+        "17",
+        "3",
+        "4",
+        "7",
+        "11",
+        "10",
+        "16"
+      ],
+      "label": "orthopedic",
+      "total_items": 23269,
+      "merge_distance": 0.4054363201012171,
+      "member_details": [
+        {
+          "id": "11",
+          "name": "Razek Surgical Instruments",
+          "size": 3417
+        },
+        {
+          "id": "7",
+          "name": "Bone Drills & Screws",
+          "size": 3259
+        },
+        {
+          "id": "3",
+          "name": "Surgical instrumentation & implants",
+          "size": 3050
+        },
+        {
+          "id": "17",
+          "name": "Orthopedic Surgical Accessories",
+          "size": 2996
+        },
+        {
+          "id": "16",
+          "name": "Surgical instruments & consumables",
+          "size": 2948
+        },
+        {
+          "id": "4",
+          "name": "General Surgical Supplies",
+          "size": 2931
+        },
+        {
+          "id": "10",
+          "name": "Spine Surgical Instruments",
+          "size": 2557
+        },
+        {
+          "id": "21",
+          "name": "Cannulated surgical instruments",
+          "size": 2111
+        }
+      ]
+    },
+    {
+      "members": [
+        "14",
+        "15",
+        "13",
+        "20"
+      ],
+      "label": "sizing + final product",
+      "total_items": 13143,
+      "merge_distance": 0.43233130918839513,
+      "member_details": [
+        {
+          "id": "15",
+          "name": "Polyaxial Cannulated Pedicle Screws",
+          "size": 5997
+        },
+        {
+          "id": "13",
+          "name": "Orthopedic Instruments & Implants",
+          "size": 3152
+        },
+        {
+          "id": "20",
+          "name": "Spinal Interbody Cages",
+          "size": 2898
+        },
+        {
+          "id": "14",
+          "name": "Polyaxial Cannulated Trial Plates",
+          "size": 1096
+        }
+      ]
+    },
+    {
+      "members": [
+        "6",
+        "2",
+        "9"
+      ],
+      "label": "dental",
+      "total_items": 7905,
+      "merge_distance": 0.40706249053352106,
+      "member_details": [
+        {
+          "id": "2",
+          "name": "Dental surgical implant tools",
+          "size": 3927
+        },
+        {
+          "id": "6",
+          "name": "Orthodontic Bands & Wires",
+          "size": 2334
+        },
+        {
+          "id": "9",
+          "name": "Implant system accessories",
+          "size": 1644
+        }
+      ]
+    },
+    {
+      "members": [
+        "5",
+        "12",
+        "18"
+      ],
+      "label": "supplier brands",
+      "total_items": 2624,
+      "merge_distance": 0.6418842639004323,
+      "member_details": [
+        {
+          "id": "18",
+          "name": "Medline Surgical Supplies",
+          "size": 1568
+        },
+        {
+          "id": "12",
+          "name": "Cardinal Health surgical packs",
+          "size": 833
+        },
+        {
+          "id": "5",
+          "name": "Custom Perfusion Pack Sets",
+          "size": 223
+        }
+      ]
+    },
+    {
+      "members": [
+        "8",
+        "19"
+      ],
+      "label": "lower extremity + compression",
+      "total_items": 1550,
+      "merge_distance": 0.5091638970185633,
+      "member_details": [
+        {
+          "id": "8",
+          "name": "Lower limb compression support",
+          "size": 1077
+        },
+        {
+          "id": "19",
+          "name": "Ankle\u2011Foot Orthoses (AFO)",
+          "size": 473
+        }
+      ]
+    },
+    {
+      "members": [
+        "0",
+        "1"
+      ],
+      "label": "sensory/protective",
+      "total_items": 1509,
+      "merge_distance": 0.5607289603303167,
+      "member_details": [
+        {
+          "id": "1",
+          "name": "Hearing Aid & Ear Instruments",
+          "size": 1109
+        },
+        {
+          "id": "0",
+          "name": "Eye Protection & Accessories",
+          "size": 400
+        }
+      ]
+    }
+  ],
+  "descriptions": {
+    "2": "Dental surgical implant tools are the specialised instruments and supplies that dentists use to place artificial tooth roots into the jawbone.",
+    "9": "Implant system accessories are essential tools that complement the main dental implants, helping surgeons to prepare bone, secure the implant, and pro",
+    "11": "Razek Surgical Instruments is a collection of tools used by surgeons to perform a wide range of procedures, from delicate bone work to precision cutti",
+    "13": "Orthopedic Instruments & Implants is a collection of tools and devices that surgeons use to diagnose, treat and support bone and joint conditions.",
+    "15": "Polyaxial Cannulated Pedicle Screws are specialised screws designed to anchor bone grafts and implants into the spine, allowing the screw to be placed",
+    "16": "Surgical instruments & consumables are the tools and disposables that surgeons use during operations.",
+    "17": "Orthopedic Surgical Accessories comprise a vast array of tools and devices that aid surgeons in stabilising bones, joints and soft tissues during oper",
+    "18": "Medline Surgical Supplies is a collection that includes a wide range of items used by medical and surgical teams, from everyday protective equipment t",
+    "21": "Cannulated surgical instruments are specialised tools that allow surgeons to thread them through body cavities, creating a clear pathway for other dev"
+  }
+}
