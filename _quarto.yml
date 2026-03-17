@@ -1,0 +1,69 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - chat/**
+    - data/**
+    - js/**
+
+website:
+  title: "GUDID Explorer"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: categories/index.qmd
+        text: Categories
+    right:
+      - icon: github
+        href: https://github.com/jdonaldson/dyf
+  sidebar:
+    style: docked
+    contents:
+      - categories/index.qmd
+      - section: "Orthopedic"
+        contents:
+          - categories/razek-surgical-instruments.qmd
+          - categories/bone-drills-screws.qmd
+          - categories/surgical-instrumentation-implants.qmd
+          - categories/orthopedic-surgical-accessories.qmd
+          - categories/surgical-instruments-consumables.qmd
+          - categories/general-surgical-supplies.qmd
+          - categories/spine-surgical-instruments.qmd
+          - categories/cannulated-surgical-instruments.qmd
+      - section: "Sizing + Final Product"
+        contents:
+          - categories/polyaxial-cannulated-pedicle-screws.qmd
+          - categories/orthopedic-instruments-implants.qmd
+          - categories/spinal-interbody-cages.qmd
+          - categories/polyaxial-cannulated-trial-plates.qmd
+      - section: "Dental"
+        contents:
+          - categories/dental-surgical-implant-tools.qmd
+          - categories/orthodontic-bands-wires.qmd
+          - categories/implant-system-accessories.qmd
+      - section: "Supplier Brands"
+        contents:
+          - categories/medline-surgical-supplies.qmd
+          - categories/cardinal-health-surgical-packs.qmd
+          - categories/custom-perfusion-pack-sets.qmd
+      - section: "Lower Extremity + Compression"
+        contents:
+          - categories/lower-limb-compression-support.qmd
+          - categories/anklefoot-orthoses-afo.qmd
+      - section: "Sensory/Protective"
+        contents:
+          - categories/hearing-aid-ear-instruments.qmd
+          - categories/eye-protection-accessories.qmd
+
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+        - css/explorer.scss
+      dark:
+        - darkly
+        - css/explorer.scss
+    toc: false
+    include-after-body: _includes/chat-sidebar.html

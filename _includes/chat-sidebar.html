@@ -1,0 +1,17 @@
+<!-- Chat sidebar: iframe container + toggle button -->
+<div id="chat-sidebar" class="chat-sidebar">
+  <button id="chat-toggle" class="chat-toggle" onclick="toggleChatSidebar()" aria-label="Toggle chat">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+  </button>
+  <div class="chat-sidebar-content">
+    <div class="chat-sidebar-header">
+      <span>Chat</span>
+      <button class="chat-close-btn" onclick="toggleChatSidebar()" aria-label="Close chat">&times;</button>
+    </div>
+    <iframe id="chat-iframe" src="/chat/chat-panel.html" title="DYF Chat"></iframe>
+  </div>
+</div>
+
+<script src="/js/chat-bridge.js"></script>

@@ -1,0 +1,11 @@
+_site/
+.quarto/
+**/*.quarto_ipynb
+
+# Generated data — too large for git, regenerate with scripts/generate_site.py
+data/gudid_viz.dyf
+data/chat_idf_index.json
+data/communities.json
+data/centroids.json
+data/scaffold.json
+data/scaffold_text.txt

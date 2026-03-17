@@ -1,0 +1,27 @@
+---
+title: "GUDID Explorer"
+---
+
+An interactive explorer for the GUDID medical device dataset, built with [DYF](https://github.com/jdonaldson/dyf).
+
+## What's here
+
+- **[Categories](categories/index.qmd)** — Browse all product categories organized by functional group
+- **Chat** — Ask questions about the dataset using an in-browser LLM (toggle the chat panel on the right)
+
+## About the dataset
+
+This explorer presents a structured view of medical device records from the FDA's [Global Unique Device Identification Database (GUDID)](https://accessgudid.nlm.nih.gov/). Devices are organized into semantically coherent categories using DYF's tree-based clustering and Louvain community detection on embedding centroids.
+
+Each category page shows:
+
+- A description of what the category contains
+- Sample products from the category
+- Related categories (by embedding similarity and bundle membership)
+
+The chat panel runs entirely in your browser — no server required. It loads a small LLM (Qwen 1.5B), a text-to-speech model, and an embedding model for semantic search.
+
+::: {.callout-tip}
+## First visit?
+The chat panel needs to download ~1.1GB of model weights on first visit. They're cached by your browser for fast subsequent loads.
+:::
