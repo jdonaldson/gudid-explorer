@@ -248,10 +248,6 @@
     <input type="text" id="user-input" placeholder="Ask about the dataset..." disabled>
     <div class="input-toggles">
       <label><input type="checkbox" id="audio-cb" checked> Audio</label>
-      <select id="tts-engine">
-        <option value="browser">Fast</option>
-        <option value="kokoro">Kokoro</option>
-      </select>
     </div>
     <button id="send-btn" disabled>Send</button>
     <button id="stop-btn">Stop</button>
@@ -288,7 +284,6 @@ const inputEl = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 const stopBtn = document.getElementById("stop-btn");
 const audioCb = document.getElementById("audio-cb");
-const ttsSelect = document.getElementById("tts-engine");
 const progArea = document.getElementById("progress-area");
 
 // ── Conversation persistence ─────────────────────────────────────────────
@@ -752,25 +747,6 @@ function highlightWord(spans, index) {
   }
 }
 
-async function speakBrowser(el, text) {
-  const spans = wrapWordsInSpans(el, text);
-  return new Promise((resolve) => {
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.rate = 1.1;
-    let wordIndex = 0;
-    utter.onboundary = (e) => {
-      if (e.name === "word") {
-        const before = text.slice(0, e.charIndex);
-        wordIndex = before.split(/\s+/).filter(Boolean).length;
-        highlightWord(spans, wordIndex);
-      }
-    };
-    utter.onend = () => { highlightWord(spans, -1); resolve(); };
-    utter.onerror = () => { highlightWord(spans, -1); resolve(); };
-    speechSynthesis.speak(utter);
-  });
-}
-
 function splitSentences(text) {
   // Split on sentence boundaries, keeping delimiters attached
   const parts = text.match(/[^.!?]+[.!?]+[\s]*/g) || [text];
@@ -787,7 +763,7 @@ function splitSentences(text) {
 }
 
 async function speakKokoro(el, text) {
-  if (!tts) { await speakBrowser(el, text); return; }
+  if (!tts) return;
 
   // Show pulsing progress during generation
   let fill = el.querySelector(".render-fill");
@@ -864,17 +840,15 @@ async function speakKokoro(el, text) {
     fill.classList.remove("playing");
     activeAudioSrc = null;
   } catch (e) {
-    console.warn("Kokoro TTS failed, falling back to browser:", e);
+    console.warn("Kokoro TTS error:", e);
     fill.classList.remove("generating", "playing");
     fill.style.width = "0%";
     highlightWord(spans, -1);
-    await speakBrowser(el, text);
   }
 }
 
 async function speakWithHighlight(el, text) {
-  if (ttsSelect.value === "browser") await speakBrowser(el, text);
-  else await speakKokoro(el, text);
+  await speakKokoro(el, text);
 }
 
 // ── RAG logic ────────────────────────────────────────────────────────────
